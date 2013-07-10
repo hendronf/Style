@@ -173,3 +173,108 @@ img {
 	display: table;
 	content: "";
 }
+
+/* layout */
+
+.main-navigation {
+	top: 3rem;
+	bottom:0;
+	left:0;
+	position: fixed;
+	min-width: 18rem;
+	display: block;
+	background-color:#e8e8e8;
+}
+
+
+.nav-menu ul {
+	min-height: 100%;
+	padding: 1rem 0 1rem 1rem;
+}
+
+.site-header {
+	min-height: 3rem;
+	position: fixed;
+	width: 100%;
+}
+
+.site-search {
+	width: 18rem;
+	height: 3rem;
+	float: left;
+}
+
+.site-description {
+	padding-left: 2rem;
+	margin-left: 18rem;
+	padding: 0.75rem 2rem;
+	font-size: 1.25rem;
+	color: #fff;
+	vertical-align: auto;
+	font-weight: lighter;
+}
+
+.site-description a {
+	color: #fff;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+
+#content {
+	height: 100%;
+	margin: 3rem 0 1rem 18rem;
+	position: relative;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	padding-bottom: 0.5rem;
+}
+
+.site-info{
+	padding-left: 1rem;
+}
+
+/*end layout*/
+
+#content {
+	padding: 0 2rem;
+}
+
+#s {
+	border-radius: 20px;
+}
+
+.site-header {
+	background-color: #39465A;
+	z-index: 1;
+}
+
+
+blockquote {
+	background-color: #eee;
+	padding: 0.5rem;
+	border-left: 2px solid #aaa;
+	margin: 0.5rem 0;
+}
+
+article {
+	margin-bottom: 2rem;
+}
+
+#searchsubmit {
+	display: none;
+}
+
+#searchform	{
+	padding: 0.5rem 2rem;
+}
+
+
+
+
+
+
+

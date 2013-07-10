@@ -20,6 +20,7 @@
 get_header(); ?>
 
 	<section id="primary" class="site-content">
+	<?php get_sidebar(); ?>
 		<div id="content" role="main">
 
 		<?php if ( have_posts() ) : ?>
