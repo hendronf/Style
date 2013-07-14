@@ -38,8 +38,6 @@
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
 		<hgroup>
-			
-			<div class="site-search"><?php get_search_form(); ?></div>
 			<div class="site-description"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> <?php bloginfo( 'description' ); ?></div>
 		</hgroup>
 	</header><!-- #masthead -->

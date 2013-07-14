@@ -182,32 +182,24 @@ body {
 	bottom: 0;
 	left: 0;
 }
+
 .site {
-	position: fixed;
-	right: 0;
-	left: 0;
+	margin-top: 3rem;
 }
 
 .main-navigation {
-	top: 0;
-	bottom:0;
-	left:0;
 	width: 18rem;
-	min-height: 100px;
-	display: block;
 	background-color:#e8e8e8;
-	position: relative;
+	min-height: 100%!important;
 	float: left;
+	position: fixed;
 }
 
 .main-menu-nav-container {
 	margin-top: 3rem;
-	display: block;
 }
 
 .nav-menu {
-	width: 18rem;
-	display: block;
 	background-color:#e8e8e8;
 	z-index: -1;
 }
@@ -220,10 +212,14 @@ body {
 	min-height: 3rem;
 	top: 0;
 	width: 100%;
+	position: fixed;
+}
+
+.admin-bar .site-header {
+	top: 28px;
 }
 
 .site-search {
-	width: 18rem;
 	height: 3rem;
 	float: left;
 }
@@ -245,26 +241,27 @@ body {
 	font-size: 1.5rem;
 }
 
-footer {
+#colophon {
 	position: fixed;
 	bottom: 0;
 	padding-bottom: 0.5rem;
-}
-
-.site-info{
-	padding-left: 1rem;
+	width: 18rem;
+	text-align: center;
 }
 
 #content {
-	margin: 0 0 0 20rem;	
+	padding: 0 2rem 0 0;
+	margin-left: 20rem;
+	padding-bottom: 3rem;
+}
+
+code	{
+	overflow: auto;
+	width: 100%;
+	white-space: normal;
 }
 
 /*end layout*/
-
-
-#s {
-	border-radius: 20px;
-}
 
 .site-header {
 	background-color: #39465A;
@@ -279,21 +276,47 @@ blockquote {
 	margin: 0.5rem 0;
 }
 
-article {
-	margin-bottom: 2rem;
+.menu-main-container{
+	margin-top: 5rem;
+	margin-left: 1rem;
+}
+
+.menu-item {
+	height: 100%;
+	padding: 0.25rem 0;
+	width: 100%;
+}
+
+.nav-menu .menu-item {
+	width: 100%;
+	border-bottom: 1px solid #ddd;
+}
+
+.sub-menu {
+	display: none;
+	padding: 0.5rem 0.5rem 0 1rem!important;
+}
+
+.menu-item:hover > .sub-menu {
+	display: block;
+}
+
+/*Searchform Styles*/
+
+#s {
+	width: 14rem;
 }
 
 #searchsubmit {
 	display: none;
 }
 
-#searchform	{
-	padding: 0.5rem 2rem;
+.site-search{
+	padding-top: 1rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	padding-bottom: 1.5rem;
 }
-
-
-
-
 
 
 
