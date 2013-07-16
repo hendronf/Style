@@ -21,17 +21,17 @@
 function twentytwelve_custom_header_setup() {
 	$args = array(
 		// Text color and image (empty to use none).
-		'default-text-color'     => '444',
+		'default-text-color'     => '',
 		'default-image'          => '',
 
 		// Set height and width, with a maximum value for the width.
-		'height'                 => 250,
-		'width'                  => 960,
-		'max-width'              => 2000,
+		'height'                 => 70,
+		'width'                  => 240,
+		'max-width'              => 240,
 
 		// Support flexible height and width.
-		'flex-height'            => true,
-		'flex-width'             => true,
+		'flex-height'            => false,
+		'flex-width'             => false,
 
 		// Random image rotation off by default.
 		'random-default'         => false,

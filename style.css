@@ -183,30 +183,37 @@ body {
 	left: 0;
 }
 
-.site {
-	margin-top: 3rem;
+.header-logo {
+	width: 18rem;
+	padding-top: 1rem;
+	padding-left: 1rem;
 }
+
+/*.site {
+	margin-top: 3rem;
+}*/
 
 .main-navigation {
 	width: 18rem;
 	background-color:#e8e8e8;
+	border-right: 1px solid #D1D1D1;
 	min-height: 100%!important;
 	float: left;
 	position: fixed;
 }
 
 .main-menu-nav-container {
-	margin-top: 3rem;
+	margin-top: 3rem;	
 }
 
 .nav-menu {
-	background-color:#e8e8e8;
 	z-index: -1;
+	padding-left: 1.25rem;
 }
 
 .nav-menu ul {
 	padding: 1rem 0 1rem 1rem;
-}
+}	
 
 .site-header {
 	min-height: 3rem;
@@ -225,19 +232,18 @@ body {
 }
 
 .site-description {
-	padding-left: 2rem;
-	margin-left: 18rem;
-	padding: 0.75rem 2rem;
+	width: 18rem;
+	margin-left:1.5rem;
+	padding-top: 2rem;
+	padding-bottom: 1rem;
 	font-size: 1.25rem;
-	color: #fff;
-	vertical-align: auto;
+	color: #39465A;;
 	font-weight: lighter;
 }
 
 .site-description a {
-	color: #fff;
-	font-style: italic;
-	font-weight: bold;
+	color: #39465A;
+	font-weight: normal;
 	font-size: 1.5rem;
 }
 
@@ -252,7 +258,8 @@ body {
 #content {
 	padding: 0 2rem 0 0;
 	margin-left: 20rem;
-	padding-bottom: 3rem;
+	padding-bottom: 2.5rem;
+	padding-top: 2.5rem;
 }
 
 code	{
@@ -272,33 +279,40 @@ code	{
 blockquote {
 	background-color: #eee;
 	padding: 0.5rem;
-	border-left: 2px solid #aaa;
+	border-left: 2px solid #39465A;;
 	margin: 0.5rem 0;
 }
 
 .menu-main-container{
 	margin-top: 5rem;
 	margin-left: 1rem;
-}
-
-.menu-item {
-	height: 100%;
-	padding: 0.25rem 0;
 	width: 100%;
 }
 
-.nav-menu .menu-item {
-	width: 100%;
-	border-bottom: 1px solid #ddd;
+.topie > .menu-item {
+	display: inline;
+	line-height: 3rem;
+	padding: 0 0.5rem;
+}
+
+.topie {
+	float: right;
+	margin-right: 1.5rem;
+}
+
+.topie > .menu-item a {
+	color: #fff;
+	font-weight: lighter;
 }
 
 .sub-menu {
 	display: none;
-	padding: 0.5rem 0.5rem 0 1rem!important;
+	padding: 0rem 0 0 1rem!important;
 }
 
 .menu-item:hover > .sub-menu {
 	display: block;
+	max-width: 14rem;
 }
 
 /*Searchform Styles*/
@@ -318,5 +332,24 @@ blockquote {
 	padding-bottom: 1.5rem;
 }
 
+/*General Styles*/
 
+h1, h2, h3, h4, h5, h6 {
+	font-family: Georgia, 'Times New Roman', 'Helvetica Neue', 'Helvetica';
+	color: #39465A;
+	font-weight: normal;
+	margin-bottom: 0.5rem;
+}
+
+h1 {
+	font-size: 	1.75rem;
+}
+
+h2 {
+	font-size: 	1.55rem;
+}
+
+h3 {
+	font-size: 	1.35rem;
+}
 

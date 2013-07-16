@@ -62,6 +62,7 @@ function twentytwelve_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menu( 'primary', __( 'Primary Menu', 'twentytwelve' ) );
+	register_nav_menu( 'sidebar', __( 'Sidebar Menu', 'twentytwelve' ) );
 
 	/*
 	 * This theme supports custom background color and image, and here
