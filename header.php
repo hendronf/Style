@@ -31,7 +31,6 @@
 <![endif]-->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="http://assets.internations.org/static/bundling/all-min.e0bb47acb5daa4ae578b339116bd9e7b36268c24.css" type="text/css">
 <?php wp_head(); ?>
 </head>
 

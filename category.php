@@ -14,12 +14,12 @@
 get_header(); ?>
 
 	<section id="primary" class="site-content">
-	<?php get_sidebar(); ?>s
+	<?php get_sidebar(); ?>
 		<div id="content" role="main">
 
 		<?php if ( have_posts() ) : ?>
 			<header class="archive-header">
-				<h1 class="archive-title"><?php printf( __( 'Category Archives: %s', 'twentytwelve' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?></h1>
+				<h6 class="archive-title"><?php printf( __( 'Section: %s', 'twentytwelve' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?></h6>
 
 			<?php if ( category_description() ) : // Show an optional category description ?>
 				<div class="archive-meta"><?php echo category_description(); ?></div>
