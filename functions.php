@@ -449,3 +449,40 @@ function twentytwelve_customize_preview_js() {
 	wp_enqueue_script( 'twentytwelve-customizer', get_template_directory_uri() . '/js/theme-customizer.js', array( 'customize-preview' ), '20120827', true );
 }
 add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
+
+
+//  Custom Login Logo and style
+function my_login_logo() { ?>
+    <style type="text/css">
+        body.login div#login h1 a {
+            background-image: url(<?php echo get_bloginfo( 'template_directory' ) ?>/img/logo.png);
+            padding-bottom: 30px;
+            background-size: inherit;
+        }
+        .login_form_message {
+        	padding-bottom: 1rem;
+        	color: #777;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
+
+add_filter( 'login_headerurl', 'custom_login_header_url' );
+function custom_login_header_url($url) {
+return '';
+}
+
+// Redirect to homepage after login
+
+function admin_default_page() {
+  return '/';
+}
+
+add_filter('login_redirect', 'admin_default_page');
+
+// Custom Login Message
+
+add_action('login_form', 'login_form_message');
+function login_form_message() {
+	echo '<p class="login_form_message">Please <a href="mailto:fearghal.hendron@internations.org">contact me</a> if you need login details.</p>';
+}

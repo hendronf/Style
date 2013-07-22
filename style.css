@@ -185,9 +185,8 @@ body {
 }
 
 .header-logo {
-	width: 18rem;
-	padding-top: 1rem;
-	padding-left: 1rem;
+	width: 15rem;
+	padding: 1.5rem;
 }
 
 /*.site {
