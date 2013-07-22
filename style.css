@@ -386,6 +386,10 @@ p {
 	color: #717171;
 }
 
+a.logouturl{
+	color: #C00;
+}
+
 .entry-content ul, .entry-content ol {
 	list-style: inside;
 	margin: 0.75rem 0;

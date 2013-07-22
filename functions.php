@@ -451,6 +451,7 @@ function twentytwelve_customize_preview_js() {
 add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
 
 
+
 //  Custom Login Logo and style
 function my_login_logo() { ?>
     <style type="text/css">
@@ -472,6 +473,8 @@ function custom_login_header_url($url) {
 return '';
 }
 
+
+
 // Redirect to homepage after login
 
 function admin_default_page() {
@@ -480,9 +483,16 @@ function admin_default_page() {
 
 add_filter('login_redirect', 'admin_default_page');
 
+
+
 // Custom Login Message
 
 add_action('login_form', 'login_form_message');
 function login_form_message() {
 	echo '<p class="login_form_message">Please <a href="mailto:fearghal.hendron@internations.org">contact me</a> if you need login details.</p>';
+}
+
+// show admin bar only for admins and editors
+if (!current_user_can('edit_posts')) {
+	add_filter('show_admin_bar', '__return_false');
 }
