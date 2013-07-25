@@ -1,0 +1,464 @@
+/*
+Theme Name: Style
+Theme URI: hhttps://github.com/hendronf/Stile
+Author: Fearghal Hendron
+Author URI: http://fearghal.co.uk
+Description: A Universal Wordpress Style Guide Theme
+Version: 0.1.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: stile
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* =Notes
+--------------------------------------------------------------
+This stylesheet uses rem values with a pixel fallback. The rem
+values (and line heights) are calculated using two variables:
+
+$rembase:     14;
+$line-height: 24;
+
+---------- Examples
+
+* Use a pixel value with a rem fallback for font-size, padding, margins, etc.
+	padding: 5px 0;
+	padding: 0.357142857rem 0; (5 / $rembase)
+
+* Set a font-size and then set a line-height based on the font-size
+	font-size: 16px
+	font-size: 1.142857143rem; (16 / $rembase)
+	line-height: 1.5; ($line-height / 16)
+
+---------- Vertical spacing
+
+Vertical spacing between most elements should use 24px or 48px
+to maintain vertical rhythm:
+
+.my-new-div {
+	margin: 24px 0;
+	margin: 1.714285714rem 0; ( 24 / $rembase )
+}
+
+---------- Further reading
+
+http://snook.ca/archives/html_and_css/font-size-with-rem
+http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/
+
+*/
+
+/*Generic Colors*/
+@white: 	#ffffff;
+@red:		#C00;
+@lightgray: #e8e8e8; /* Light Gray, used for background, hr's and other elements. */
+@darkgray: #717171; /* used for muted text on a lightgray background. Footer links */
+
+/*Brand Colors*/
+@inblue: #39465A;
+
+
+/*Gradient Colors*/
+.inbluegrad{
+	background-color: @inblue;
+	background: -webkit-gradient(linear, left center, right center, from(@inblue), to(@white));
+	background: -webkit-linear-gradient(left, @inblue, @white);
+	background: -moz-linear-gradient(left, @inblue, @white);
+	background: -ms-linear-gradient(left, @inblue, @white);
+	background: -o-linear-gradient(left, @inblue, @white);
+}
+
+/* =Reset
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+body {
+	line-height: 1;
+}
+ol,
+ul {
+	list-style: none;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+caption,
+th,
+td {
+	font-weight: normal;
+	text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+}
+html {
+	overflow-y: scroll;
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+a:focus {
+	outline: thin dotted;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+	display: block;
+}
+audio,
+canvas,
+video {
+	display: inline-block;
+}
+audio:not([controls]) {
+	display: none;
+}
+del {
+	color: #333;
+}
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+hr {
+	background-color: @lightgray;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.714285714rem;
+}
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+small {
+	font-size: smaller;
+}
+img {
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+
+/* Clearing floats */
+.clear:after,
+.wrapper:after,
+.format-status .entry-header:after {
+	clear: both;
+}
+.clear:before,
+.clear:after,
+.wrapper:before,
+.wrapper:after,
+.format-status .entry-header:before,
+.format-status .entry-header:after {
+	display: table;
+	content: "";
+}
+
+/*The following code is code that Fearghal has vomitted up. Please excuse it and please refactor it! ;) */
+
+/* States */
+.is-hidden {
+	display: none !important;
+}
+
+/* layout */
+
+body {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.header-logo {
+	width: 15rem;
+	padding: 1.5rem;
+}
+
+/*.site {
+	margin-top: 3rem;
+}*/
+
+.main-navigation {
+	width: 18rem;
+	background-color:@lightgray;
+	border-right: 1px solid #D1D1D1;
+	min-height: 100%!important;
+	float: left;
+	position: fixed;
+}
+
+.main-menu-nav-container {
+	margin-top: 3rem;	
+}
+
+.nav-menu {
+	z-index: -1;
+	padding-left: 1.25rem;
+}
+
+.nav-sub-menu {
+	padding: 0.25rem 0rem 0.25rem 1rem;
+}
+
+.site-header {
+	min-height: 3rem;
+	top: 0;
+	width: 100%;
+	position: fixed;
+}
+
+.admin-bar .site-header {
+	top: 28px;
+}
+
+.site-search {
+	height: 3rem;
+	float: left;
+}
+
+.site-description {
+	width: 18rem;
+	margin-left:1.5rem;
+	padding-top: 2rem;
+	padding-bottom: 1rem;
+	font-size: 1.25rem;
+	color: #39465A;;
+	font-weight: lighter;
+}
+
+.site-description a {
+	color: #39465A;
+	font-weight: normal;
+	font-size: 1.5rem;
+}
+
+#colophon {
+	position: fixed;
+	bottom: 0;
+	padding-bottom: 0.5rem;
+	width: 18rem;
+	text-align: center;
+}
+
+#content {
+	padding: 2.5rem 2rem 2.5rem 20rem;
+}
+
+#content.homepage {
+padding: 0;
+margin-left: 0rem;
+width: 30rem;
+height: 30rem;
+}
+
+.homepage-logo {
+	margin-left: -7rem;
+}
+
+
+
+code	{
+	overflow: auto;
+	width: 100%;
+	white-space: normal;
+}
+
+/*end layout*/
+
+.site-header {
+	background-color: #39465A;
+	z-index: 1;
+}
+
+
+blockquote {
+	background-color: @lightgray;
+	padding: 0.5rem;
+	border-left: 2px solid #39465A;;
+	margin: 0.5rem 0;
+}
+
+blockquote p {
+	margin:0;
+}
+
+.menu-main-container{
+	margin-top: 5rem;
+	margin-left: 1rem;
+	width: 100%;
+}
+
+.topie > .menu-item {
+	display: inline;
+	line-height: 3rem;
+	padding: 0 0.5rem;
+}
+
+.topie {
+	float: right;
+	margin-right: 1.5rem;
+}
+
+.topie > .menu-item a {
+	color: #fff;
+	font-weight: lighter;
+}
+
+.sub-menu {
+/*	display: none;*/
+	padding: 0rem 0 0 1rem!important;
+}
+
+.menu-item:hover > .sub-menu {
+	display: block;
+	max-width: 14rem;
+}
+
+/*Searchform Styles*/
+
+#s {
+	width: 14rem;
+}
+
+#searchsubmit {
+	display: none;
+}
+
+.site-search{
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	padding-bottom: 1.5rem;
+}
+
+/*General Styles*/
+
+a, a:hover {
+	color: #2469A0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Georgia, 'Times New Roman', 'Helvetica Neue', 'Helvetica';
+	color: #39465A;
+	font-weight: normal;
+	margin-bottom: 0.5rem;
+}
+
+h1 {
+	font-size: 	1.75rem;
+}
+
+h2 {
+	font-size: 	1.55rem;
+}
+
+h3 {
+	font-size: 	1.35rem;
+}
+
+p {
+  line-height: 1.2rem;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem }
+
+.entry-meta, .site-info {
+	font-size: 0.75rem;
+	color: @darkgray;
+	margin-top: rem;
+}
+
+.site-info a {
+	color: @darkgray;
+}
+
+a.logouturl{
+	color: @red;
+}
+
+.entry-content ul, .entry-content ol {
+	list-style: inside;
+	margin: 0.75rem 0;
+}
+
+.archive-title {
+	float: right;
+	color: @lightgray;
+}
+
+.search-result-entries {
+margin: 1rem 0;
+border-bottom: 1px solid @lightgray;
+padding: 0 0 1rem 0;
+}
+
+
+
+.colorbox {
+	width: 13rem;
+	height: 8rem;
+	font-size: 10pt;
+	color: @white;
+}
+
+.colorgrad{
+	width: 13rem;
+	height: 2rem;
+}
+
+.colorbox ul {
+	list-style-type: none;
+	padding: 1rem;
+}
+
+.colorbox ul li {
+	text-align: right;
+}
+
+.colorbox label {
+	float: left;
+	font-weight: bolder;
+}
+
+.inblue {
+	background-color: @inblue;
+}

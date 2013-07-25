@@ -1,33 +1,34 @@
 /**
  * navigation.js
  *
- * Handles toggling the navigation menu for small screens.
+ * Handles toggling the sub-menus
  */
 ( function() {
-	var nav = document.getElementById( 'site-navigation' ), button, menu;
-	if ( ! nav )
-		return;
-	button = nav.getElementsByTagName( 'h3' )[0];
-	menu   = nav.getElementsByTagName( 'ul' )[0];
-	if ( ! button )
-		return;
+	function initializeMenu(el) {
+		this.$el = $(el);
+		this.subMenus = this.$el.find('.menu-item .nav-sub-menu');
 
-	// Hide button if menu is missing or empty.
-	if ( ! menu || ! menu.childNodes.length ) {
-		button.style.display = 'none';
-		return;
+		this.subMenus.addClass('is-hidden');
+
+		this.hookEvents();
+	};
+
+	initializeMenu.prototype = {
+		hookEvents: function() {
+			this.$el.on('click', this.handleMenuClick);
+		},
+
+		handleMenuClick: function(e) {
+			var $el = $(e.target).closest('li'),
+				subMenu = $el.find('.nav-sub-menu').first();
+
+			subMenu.toggleClass('is-hidden');
+			console.log($el);
+			return false;
+		}
 	}
 
-	button.onclick = function() {
-		if ( -1 == menu.className.indexOf( 'nav-menu' ) )
-			menu.className = 'nav-menu';
 
-		if ( -1 != button.className.indexOf( 'toggled-on' ) ) {
-			button.className = button.className.replace( ' toggled-on', '' );
-			menu.className = menu.className.replace( ' toggled-on', '' );
-		} else {
-			button.className += ' toggled-on';
-			menu.className += ' toggled-on';
-		}
-	};
+
+	new initializeMenu('.nav-menu');
 } )();

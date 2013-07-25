@@ -496,3 +496,12 @@ function login_form_message() {
 if (!current_user_can('edit_posts')) {
 	add_filter('show_admin_bar', '__return_false');
 }
+
+
+// Customizing Nav Menu's sub menus
+class My_Walker_Nav_Menu extends Walker_Nav_Menu {
+  function start_lvl(&$output, $depth) {
+    $indent = str_repeat("\t", $depth);
+    $output .= "\n$indent<ul class=\"nav-sub-menu\">\n";
+  }
+}

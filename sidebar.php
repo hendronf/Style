@@ -14,5 +14,5 @@
 	</header><!-- #masthead -->
 			<div class="site-search"><?php get_search_form(); ?></div>
 			<!-- <h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3> -->
-			<?php wp_nav_menu( array( 'theme_location' => 'sidebar', 'menu_class' => 'nav-menu' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'sidebar', 'menu_class' => 'nav-menu', 'walker' => new My_Walker_Nav_Menu(), ) ); ?>
 		</nav><!-- #site-navigation -->
