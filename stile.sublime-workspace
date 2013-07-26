@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"bac",
+				"background-color"
+			],
+			[
+				"menu",
+				"main-menu-nav-container"
+			],
+			[
 				"N",
 				"Neue"
 			],
@@ -43,7 +51,7 @@
 			"file": "style.less",
 			"settings":
 			{
-				"buffer_size": 7949,
+				"buffer_size": 7432,
 				"line_ending": "Unix"
 			}
 		},
@@ -56,18 +64,18 @@
 			}
 		},
 		{
-			"file": "functions.php",
+			"file": "js/navigation-ck.js",
 			"settings":
 			{
-				"buffer_size": 17864,
+				"buffer_size": 464,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "js/navigation.js",
+			"file": "functions.php",
 			"settings":
 			{
-				"buffer_size": 677,
+				"buffer_size": 17864,
 				"line_ending": "Unix"
 			}
 		}
@@ -83,10 +91,7 @@
 	},
 	"console":
 	{
-		"height": 0.0,
-		"history":
-		[
-		]
+		"height": 0.0
 	},
 	"distraction_free":
 	{
@@ -99,9 +104,11 @@
 	},
 	"file_history":
 	[
+		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/js/navigation-ck.js",
+		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/js/navigation.js",
+		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/functions.php",
 		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/style.less",
 		"/Users/hendronf/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/functions.php",
 		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/style.css",
 		"/Users/hendronf/Sites/Styleguide/wp-content/themes/Stile/sidebar.php",
 		"/Users/hendronf/Sites/Styleguide/wp-content/themes/Stile/functions.php",
@@ -131,6 +138,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"bac",
+			"#wpadminbar",
+			".contentinfo",
+			"#masthead",
+			".menu-main-nav-container",
 			".css",
 			"font-family",
 			"nav",
@@ -165,27 +177,26 @@
 				{
 					"buffer": 0,
 					"file": "style.less",
-					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7949,
+						"buffer_size": 7432,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4420,
-								4420
+								581,
+								584
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/User/less/LESS.tmLanguage",
+							"syntax": "Packages/CSS/CSS.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 1.0,
-						"translation.y": 2749.0,
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -193,7 +204,6 @@
 				{
 					"buffer": 1,
 					"file": "header.php",
-					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 1590,
@@ -212,15 +222,40 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 51.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
+					"file": "js/navigation-ck.js",
+					"settings":
+					{
+						"buffer_size": 464,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								66,
+								66
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
 					"file": "functions.php",
-					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 17864,
@@ -230,8 +265,8 @@
 						"selection":
 						[
 							[
-								3784,
-								3784
+								0,
+								0
 							]
 						],
 						"settings":
@@ -239,36 +274,8 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 88.0,
-						"translation.y": 1360.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "js/navigation.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 677,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								65,
-								677
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 6966.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -307,7 +314,6 @@
 		]
 	},
 	"menu_visible": true,
-	"project": "stile.sublime-project",
 	"replace":
 	{
 		"height": 42.0
@@ -329,24 +335,10 @@
 		],
 		"width": 0.0
 	},
-	"select_symbol":
-	{
-		"height": 0.0,
-		"selected_items":
-		[
-		],
-		"width": 0.0
-	},
-	"settings":
-	{
-	},
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
 	"side_bar_width": 271.0,
-	"status_bar_visible": true,
-	"template_settings":
-	{
-	}
+	"status_bar_visible": true
 }

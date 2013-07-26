@@ -477,3 +477,6 @@ a.logouturl {
 .inblue {
   background-color: #39465a;
 }
+#wpadminbar .header-logo {
+  margin-top: 2rem;
+}
