@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"N",
+				"Neue"
+			],
+			[
 				"sub",
 				"nav-sub-menu"
 			],
@@ -36,10 +40,18 @@
 	"buffers":
 	[
 		{
-			"file": "style.css",
+			"file": "style.less",
 			"settings":
 			{
-				"buffer_size": 7345,
+				"buffer_size": 7949,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "header.php",
+			"settings":
+			{
+				"buffer_size": 1590,
 				"line_ending": "Unix"
 			}
 		},
@@ -47,7 +59,15 @@
 			"file": "functions.php",
 			"settings":
 			{
-				"buffer_size": 17861,
+				"buffer_size": 17864,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/navigation.js",
+			"settings":
+			{
+				"buffer_size": 677,
 				"line_ending": "Unix"
 			}
 		}
@@ -79,6 +99,10 @@
 	},
 	"file_history":
 	[
+		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/style.less",
+		"/Users/hendronf/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/functions.php",
+		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/style.css",
 		"/Users/hendronf/Sites/Styleguide/wp-content/themes/Stile/sidebar.php",
 		"/Users/hendronf/Sites/Styleguide/wp-content/themes/Stile/functions.php",
 		"/Users/hendronf/Sites/Styleguide/wp-content/themes/Stile/js/navigation.js",
@@ -107,6 +131,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			".css",
+			"font-family",
 			"nav",
 			"sub-menu",
 			";\n",
@@ -133,31 +159,57 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "style.css",
+					"file": "style.less",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7345,
+						"buffer_size": 7949,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								4420,
+								4420
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/User/less/LESS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 1.0,
+						"translation.y": 2749.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "header.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1590,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								347,
+								347
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -166,25 +218,53 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 2,
 					"file": "functions.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 17861,
+						"buffer_size": 17864,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								3784,
+								3784
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 88.0,
+						"translation.y": 1360.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "js/navigation.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 677,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								65,
+								677
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,

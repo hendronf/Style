@@ -273,6 +273,8 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
+  font-weight: 300;
 }
 .header-logo {
   width: 15rem;
@@ -285,12 +287,15 @@ body {
   width: 18rem;
   background-color: #e8e8e8;
   border-right: 1px solid #D1D1D1;
-  min-height: 100%!important;
+  top: 0;
+  bottom: 0;
   float: left;
   position: fixed;
+  overflow: auto;
 }
 .main-menu-nav-container {
-  margin-top: 3rem;
+  margin-top: 3rem!important;
+  position: relative;
 }
 .nav-menu {
   z-index: -1;
@@ -329,9 +334,10 @@ body {
 #colophon {
   position: fixed;
   bottom: 0;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem 0;
   width: 18rem;
   text-align: center;
+  background-color: #e8e8e8;
 }
 #content {
   padding: 2.5rem 2rem 2.5rem 20rem;
@@ -369,18 +375,8 @@ blockquote p {
   margin-left: 1rem;
   width: 100%;
 }
-.topie > .menu-item {
-  display: inline;
-  line-height: 3rem;
-  padding: 0 0.5rem;
-}
-.topie {
-  float: right;
-  margin-right: 1.5rem;
-}
-.topie > .menu-item a {
-  color: #fff;
-  font-weight: lighter;
+.menu-main-nav-container {
+  margin-top: 4rem;
 }
 .sub-menu {
   /*	display: none;*/
@@ -399,9 +395,7 @@ blockquote p {
   display: none;
 }
 .site-search {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  padding-bottom: 1.5rem;
+  margin: 0 1.5rem 1.5rem 1.5rem;
 }
 /*General Styles*/
 a,
