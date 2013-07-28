@@ -51,7 +51,7 @@
 			"file": "style.less",
 			"settings":
 			{
-				"buffer_size": 7432,
+				"buffer_size": 7318,
 				"line_ending": "Unix"
 			}
 		},
@@ -179,15 +179,15 @@
 					"file": "style.less",
 					"settings":
 					{
-						"buffer_size": 7432,
+						"buffer_size": 7318,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								581,
-								584
+								4613,
+								4613
 							]
 						],
 						"settings":
@@ -196,7 +196,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 3189.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

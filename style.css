@@ -278,17 +278,14 @@ body {
 }
 .header-logo {
   width: 15rem;
-  padding: 1.5rem;
+  padding: 3rem 1.5rem 1.5rem 1.5rem;
 }
-/*.site {
-	margin-top: 3rem;
-}*/
 .main-navigation {
   width: 18rem;
   background-color: #e8e8e8;
   border-right: 1px solid #D1D1D1;
-  top: 0;
   bottom: 0;
+  top: 0;
   float: left;
   position: fixed;
   overflow: auto;
@@ -306,12 +303,8 @@ body {
 }
 .site-header {
   min-height: 3rem;
-  top: 0;
   width: 100%;
-  position: fixed;
-}
-.admin-bar .site-header {
-  top: 28px;
+  top: 0;
 }
 .site-search {
   height: 3rem;
@@ -348,9 +341,6 @@ body {
   width: 30rem;
   height: 30rem;
 }
-.homepage-logo {
-  margin-left: -7rem;
-}
 code {
   overflow: auto;
   width: 100%;
@@ -360,6 +350,7 @@ code {
 .site-header {
   background-color: #39465A;
   z-index: 1;
+  top: 0;
 }
 blockquote {
   background-color: #e8e8e8;
@@ -476,7 +467,4 @@ a.logouturl {
 }
 .inblue {
   background-color: #39465a;
-}
-#wpadminbar .header-logo {
-  margin-top: 2rem;
 }
