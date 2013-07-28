@@ -51,7 +51,7 @@
 			"file": "style.less",
 			"settings":
 			{
-				"buffer_size": 7318,
+				"buffer_size": 7259,
 				"line_ending": "Unix"
 			}
 		},
@@ -76,6 +76,38 @@
 			"settings":
 			{
 				"buffer_size": 17864,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "footer.php",
+			"settings":
+			{
+				"buffer_size": 707,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "page.php",
+			"settings":
+			{
+				"buffer_size": 727,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "content-aside.php",
+			"settings":
+			{
+				"buffer_size": 1074,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "content-search.php",
+			"settings":
+			{
+				"buffer_size": 2995,
 				"line_ending": "Unix"
 			}
 		}
@@ -171,7 +203,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 7,
 			"sheets":
 			[
 				{
@@ -179,15 +211,15 @@
 					"file": "style.less",
 					"settings":
 					{
-						"buffer_size": 7318,
+						"buffer_size": 7259,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4613,
-								4613
+								6626,
+								6626
 							]
 						],
 						"settings":
@@ -196,7 +228,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3189.0,
+						"translation.y": 5614.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -275,7 +307,113 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 6966.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "footer.php",
+					"settings":
+					{
+						"buffer_size": 707,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								304,
+								304
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "page.php",
+					"settings":
+					{
+						"buffer_size": 727,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "content-aside.php",
+					"settings":
+					{
+						"buffer_size": 1074,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								915,
+								915
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 1027.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "content-search.php",
+					"settings":
+					{
+						"buffer_size": 2995,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1921,
+								1921
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 120.0,
+						"translation.y": 464.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
