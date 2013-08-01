@@ -50,8 +50,13 @@ http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/
 /*Generic Colors*/
 /* Light Gray, used for background, hr's and other elements. */
 /* used for muted text on a lightgray background. Footer links */
+/* Default text color used in the wire, close to black but not quite */
+/* Default text color used throughout the site. We should change the text color throughout the site to be #defaulttext and use this color for the text color on activity labels */
+/* This is the default link blue color. It is also used as the text color on activity labels */
 /*Brand Colors*/
-/*Gradient Colors*/
+/*Seondary Brand Colors*/
+/*Supporting Colors*/
+/*Gradient Colors for primary box*/
 .inbluegrad {
   background-color: #39465a;
   background: -webkit-gradient(linear, left center, right center, from(#39465a), to(#ffffff));
@@ -59,6 +64,130 @@ http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/
   background: -moz-linear-gradient(left, #39465a, #ffffff);
   background: -ms-linear-gradient(left, #39465a, #ffffff);
   background: -o-linear-gradient(left, #39465a, #ffffff);
+}
+.inyellowgrad {
+  background-color: #ecd571;
+  background: -webkit-gradient(linear, left center, right center, from(#ecd571), to(#ffffff));
+  background: -webkit-linear-gradient(left, #ecd571, #ffffff);
+  background: -moz-linear-gradient(left, #ecd571, #ffffff);
+  background: -ms-linear-gradient(left, #ecd571, #ffffff);
+  background: -o-linear-gradient(left, #ecd571, #ffffff);
+}
+.inlightbluegrad {
+  background-color: #dee8f2;
+  background: -webkit-gradient(linear, left center, right center, from(#dee8f2), to(#ffffff));
+  background: -webkit-linear-gradient(left, #dee8f2, #ffffff);
+  background: -moz-linear-gradient(left, #dee8f2, #ffffff);
+  background: -ms-linear-gradient(left, #dee8f2, #ffffff);
+  background: -o-linear-gradient(left, #dee8f2, #ffffff);
+}
+/*Button Gradient Colors*/
+.btn-darkblue {
+  background-image: -moz-linear-gradient(top, #667990, #2c3950);
+  background-image: -ms-linear-gradient(top, #667990, #2c3950);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#667990), to(#2c3950));
+  background-image: -webkit-linear-gradient(top, #667990, #2c3950);
+  background-image: -o-linear-gradient(top, #667990, #2c3950);
+  background-image: linear-gradient(top, #667990, #2c3950);
+  color: #ffffff;
+}
+.btn-lightblue {
+  background-image: -moz-linear-gradient(top, #f8feff, #afc6d8);
+  background-image: -ms-linear-gradient(top, #f8feff, #afc6d8);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f8feff), to(#afc6d8));
+  background-image: -webkit-linear-gradient(top, #f8feff, #afc6d8);
+  background-image: -o-linear-gradient(top, #f8feff, #afc6d8);
+  background-image: linear-gradient(top, #f8feff, #afc6d8);
+}
+.btn-gray {
+  background-image: -moz-linear-gradient(top, #fafcf9, #c4c6c3);
+  background-image: -ms-linear-gradient(top, #fafcf9, #c4c6c3);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fafcf9), to(#c4c6c3));
+  background-image: -webkit-linear-gradient(top, #fafcf9, #c4c6c3);
+  background-image: -o-linear-gradient(top, #fafcf9, #c4c6c3);
+  background-image: linear-gradient(top, #fafcf9, #c4c6c3);
+}
+.btn-red {
+  background-image: -moz-linear-gradient(top, #cb2a2a, #7a1313);
+  background-image: -ms-linear-gradient(top, #cb2a2a, #7a1313);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#cb2a2a), to(#7a1313));
+  background-image: -webkit-linear-gradient(top, #cb2a2a, #7a1313);
+  background-image: -o-linear-gradient(top, #cb2a2a, #7a1313);
+  background-image: linear-gradient(top, #cb2a2a, #7a1313);
+  color: #ffffff;
+}
+.btn-green {
+  background-image: -moz-linear-gradient(top, #5cc134, #499929);
+  background-image: -ms-linear-gradient(top, #5cc134, #499929);
+  background-image: -webkit-linear-gradient(top, #5cc134, #499929);
+  background-image: -o-linear-gradient(top, #5cc134, #499929);
+  background-image: linear-gradient(top, #5cc134, #499929);
+  color: #ffffff;
+}
+/* Background Colors */
+.inblue {
+  background-color: #39465a;
+  color: #ffffff;
+}
+.inyellow {
+  background-color: #ecd571;
+  color: #333333;
+}
+.inlightblue {
+  background-color: #dee8f2;
+  color: #333333;
+}
+.inevent {
+  background-color: #f2e499;
+  color: #6a5500;
+}
+.inactivity {
+  background-color: #dee8f2;
+  color: #000033;
+}
+.inother {
+  background-color: #e8e8e8;
+  color: #717171;
+}
+.inadvertising {
+  background-color: #dc4903;
+  color: #ffffff;
+}
+.ininfo {
+  background-color: #dee8f2;
+  color: #000033;
+  border: 1px solid #95b5d5;
+}
+.inalert {
+  background-color: #f2e499;
+  color: #333333;
+  border: 1px solid #e6cc3f;
+}
+.insuccess {
+  background-color: #9ad882;
+  color: #333333;
+  border: 1px solid #5eba3a;
+}
+.inwarning {
+  background-color: #ffa479;
+  color: #333333;
+  border: 1px solid #ff5f13;
+}
+/*Radius*/
+.radius2 {
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+}
+.radius2 {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.radius3 {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
 /* =Reset
 -------------------------------------------------------------- */
@@ -443,19 +572,21 @@ a.logouturl {
   border-bottom: 1px solid #e8e8e8;
   padding: 0 0 1rem 0;
 }
+/*STYELS FOR THE COLORS*/
+.color {
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-bottom: 0.7rem;
+}
 .colorbox {
   width: 13rem;
-  height: 8rem;
-  font-size: 10pt;
-  color: #ffffff;
-}
-.colorgrad {
-  width: 13rem;
-  height: 2rem;
+  font-size: 0.8rem;
+  min-height: 1.5rem;
 }
 .colorbox ul {
   list-style-type: none;
   padding: 1rem;
+  margin: 0;
 }
 .colorbox ul li {
   text-align: right;
@@ -464,6 +595,11 @@ a.logouturl {
   float: left;
   font-weight: bolder;
 }
-.inblue {
-  background-color: #39465a;
+.color-name {
+  width: 100%;
+  float: left;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: lighter;
+  margin-bottom: 1rem;
 }

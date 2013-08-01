@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"bottom",
+				"bottom"
+			],
+			[
+				"backgro",
+				"background-color"
+			],
+			[
+				"default",
+				"defaulttext"
+			],
+			[
+				"ins",
+				"insuccess"
+			],
+			[
+				"inal",
+				"inalertborder"
+			],
+			[
+				"inevent",
+				"ineventtext"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
 				"bac",
 				"background-color"
 			],
@@ -32,10 +64,6 @@
 				"list-style-type"
 			],
 			[
-				"back",
-				"background-size"
-			],
-			[
 				"s",
 				"disc"
 			],
@@ -47,14 +75,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "style.less",
-			"settings":
-			{
-				"buffer_size": 7259,
-				"line_ending": "Unix"
-			}
-		},
 		{
 			"file": "header.php",
 			"settings":
@@ -110,6 +130,30 @@
 				"buffer_size": 2995,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "page-templates/colors.php",
+			"settings":
+			{
+				"buffer_size": 8777,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "style.less",
+			"settings":
+			{
+				"buffer_size": 12377,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "buttons.less",
+			"settings":
+			{
+				"buffer_size": 10520,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -136,6 +180,8 @@
 	},
 	"file_history":
 	[
+		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/color.html",
+		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/templates/primary-colors.php",
 		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/js/navigation-ck.js",
 		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/js/navigation.js",
 		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/functions.php",
@@ -170,6 +216,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			">\n",
 			"bac",
 			"#wpadminbar",
 			".contentinfo",
@@ -208,33 +255,6 @@
 			[
 				{
 					"buffer": 0,
-					"file": "style.less",
-					"settings":
-					{
-						"buffer_size": 7259,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6626,
-								6626
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 5614.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "header.php",
 					"settings":
 					{
@@ -254,13 +274,13 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 51.0,
+						"translation.y": 199.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 1,
 					"file": "js/navigation-ck.js",
 					"settings":
 					{
@@ -286,7 +306,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 2,
 					"file": "functions.php",
 					"settings":
 					{
@@ -297,8 +317,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								3217,
+								3154
 							]
 						],
 						"settings":
@@ -307,13 +327,13 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1009.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "footer.php",
 					"settings":
 					{
@@ -339,7 +359,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 4,
 					"file": "page.php",
 					"settings":
 					{
@@ -350,7 +370,7 @@
 						"selection":
 						[
 							[
-								0,
+								727,
 								0
 							]
 						],
@@ -365,7 +385,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 5,
 					"file": "content-aside.php",
 					"settings":
 					{
@@ -376,8 +396,8 @@
 						"selection":
 						[
 							[
-								915,
-								915
+								250,
+								474
 							]
 						],
 						"settings":
@@ -385,14 +405,14 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 1027.0,
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 6,
 					"file": "content-search.php",
 					"settings":
 					{
@@ -412,8 +432,96 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 120.0,
-						"translation.y": 464.0,
+						"translation.x": 0.0,
+						"translation.y": 469.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "page-templates/colors.php",
+					"settings":
+					{
+						"buffer_size": 8777,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7617,
+								7617
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 124.0,
+						"translation.y": 3194.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 8,
+					"file": "style.less",
+					"settings":
+					{
+						"buffer_size": 12377,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4760,
+								4760
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 150.0,
+						"translation.y": 1683.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "buttons.less",
+					"settings":
+					{
+						"buffer_size": 10520,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7889,
+								7483
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2833.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -438,11 +546,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.509772326728,
 			1.0
 		],
 		"rows":
@@ -477,6 +592,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 271.0,
+	"side_bar_width": 187.0,
 	"status_bar_visible": true
 }
