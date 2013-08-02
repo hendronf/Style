@@ -505,3 +505,59 @@ class My_Walker_Nav_Menu extends Walker_Nav_Menu {
     $output .= "\n$indent<ul class=\"nav-sub-menu\">\n";
   }
 }
+
+// Custom Meta Boxes for CSS in pages.
+add_action( 'add_meta_boxes', 'pears_add_meta_box' );
+add_action( 'save_post', 'pears_save_post' );
+
+function pears_add_meta_box() {
+
+    add_meta_box( 
+        'style',
+        'Style',
+        'style_meta_box',
+        'page',
+        'normal',
+        'high'
+    );
+
+}
+
+function style_meta_box( $post ) {
+  	wp_nonce_field( plugin_basename( __FILE__ ), 'style_noncename' );
+  	$css = get_post_meta($post->ID,'css',true);
+
+	echo '<p>This field is for CSS specific to this page. The post body should contain the markup relating to this page.</p>';
+	echo '<label for="css">CSS</label>	';
+  	echo '<p><textarea id="css" name="css" rows="20" cols="90" />' . $css . '</textarea></p>';
+}
+
+function pears_save_post( $post_id ) {
+
+	// Ignore if doing an autosave
+  	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) 
+  	    return;
+			
+	// verify data came from style meta box
+  	if ( !wp_verify_nonce( $_POST['style_noncename'], plugin_basename( __FILE__ ) ) )
+		return;			
+	
+  	// Check user permissions
+  	if ( 'post' == $_POST['post_type'] ) {
+    	if ( !current_user_can( 'edit_page', $post_id ) )
+        	return;
+  	}
+  	else{
+    	if ( !current_user_can( 'edit_post', $post_id ) )
+	        return;
+  	}
+  	
+  	$html_data = $_POST['html'];
+	update_post_meta($post_id, 'html', $html_data);
+	
+	$css_data = $_POST['css'];
+	update_post_meta($post_id, 'css', $css_data);
+}
+
+// Disable visual editor by default
+add_filter ( 'user_can_richedit' , create_function ( '$a' , 'return false;' ) , 50 );

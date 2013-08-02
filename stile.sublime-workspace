@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"i",
+				"italic"
+			],
+			[
+				"font",
+				"font-style"
+			],
+			[
+				"fon",
+				"font-family"
+			],
+			[
 				"bottom",
 				"bottom"
 			],
@@ -66,84 +78,16 @@
 			[
 				"s",
 				"disc"
-			],
-			[
-				"font",
-				"font-size"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "header.php",
-			"settings":
-			{
-				"buffer_size": 1590,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "js/navigation-ck.js",
-			"settings":
-			{
-				"buffer_size": 464,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "functions.php",
-			"settings":
-			{
-				"buffer_size": 17864,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "footer.php",
-			"settings":
-			{
-				"buffer_size": 707,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "page.php",
-			"settings":
-			{
-				"buffer_size": 727,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "content-aside.php",
-			"settings":
-			{
-				"buffer_size": 1074,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "content-search.php",
-			"settings":
-			{
-				"buffer_size": 2995,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "page-templates/colors.php",
-			"settings":
-			{
-				"buffer_size": 8777,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "style.less",
 			"settings":
 			{
-				"buffer_size": 12377,
+				"buffer_size": 8076,
 				"line_ending": "Unix"
 			}
 		},
@@ -152,6 +96,14 @@
 			"settings":
 			{
 				"buffer_size": 10520,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "functions.php",
+			"settings":
+			{
+				"buffer_size": 19399,
 				"line_ending": "Unix"
 			}
 		}
@@ -180,9 +132,16 @@
 	},
 	"file_history":
 	[
+		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/header.php",
+		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/js/navigation-ck.js",
+		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/footer.php",
+		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/single.php",
+		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/page.php",
+		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/content-aside.php",
+		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/content-search.php",
+		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/page-templates/colors.php",
 		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/color.html",
 		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/templates/primary-colors.php",
-		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/js/navigation-ck.js",
 		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/js/navigation.js",
 		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/functions.php",
 		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/style.less",
@@ -216,6 +175,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			".alert",
+			"entry-content",
 			">\n",
 			"bac",
 			"#wpadminbar",
@@ -250,221 +211,8 @@
 	"groups":
 	[
 		{
-			"selected": 7,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "header.php",
-					"settings":
-					{
-						"buffer_size": 1590,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								347,
-								347
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 199.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "js/navigation-ck.js",
-					"settings":
-					{
-						"buffer_size": 464,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								66,
-								66
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "functions.php",
-					"settings":
-					{
-						"buffer_size": 17864,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3217,
-								3154
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1009.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "footer.php",
-					"settings":
-					{
-						"buffer_size": 707,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								304,
-								304
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "page.php",
-					"settings":
-					{
-						"buffer_size": 727,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								727,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "content-aside.php",
-					"settings":
-					{
-						"buffer_size": 1074,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								250,
-								474
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "content-search.php",
-					"settings":
-					{
-						"buffer_size": 2995,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1921,
-								1921
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 469.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "page-templates/colors.php",
-					"settings":
-					{
-						"buffer_size": 8777,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7617,
-								7617
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 124.0,
-						"translation.y": 3194.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		},
 		{
@@ -472,19 +220,19 @@
 			"sheets":
 			[
 				{
-					"buffer": 8,
+					"buffer": 0,
 					"file": "style.less",
 					"settings":
 					{
-						"buffer_size": 12377,
+						"buffer_size": 8076,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4760,
-								4760
+								2653,
+								2373
 							]
 						],
 						"settings":
@@ -492,14 +240,14 @@
 							"syntax": "Packages/CSS/CSS.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 150.0,
-						"translation.y": 1683.0,
+						"translation.x": 0.0,
+						"translation.y": 1113.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 1,
 					"file": "buttons.less",
 					"settings":
 					{
@@ -522,6 +270,33 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 2833.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "functions.php",
+					"settings":
+					{
+						"buffer_size": 19399,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								18280,
+								18280
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 7749.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -557,7 +332,7 @@
 		"cols":
 		[
 			0.0,
-			0.509772326728,
+			0.654802848231,
 			1.0
 		],
 		"rows":

@@ -19,6 +19,13 @@ get_header(); ?>
 		<div id="content" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
+				
+				<!-- This is to display the styles entered on the page in the admin interface -->
+				<style id="s" type="text/css">
+				<?php $key="css"; echo get_post_meta($post->ID, $key, true); ?>
+				</style>
+				<!-- End Custom page style -->
+				
 				<?php get_template_part( 'content', 'page' ); ?>
 				<?php comments_template( '', true ); ?>
 			<?php endwhile; // end of the loop. ?>
