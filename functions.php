@@ -561,3 +561,44 @@ function pears_save_post( $post_id ) {
 
 // Disable visual editor by default
 add_filter ( 'user_can_richedit' , create_function ( '$a' , 'return false;' ) , 50 );
+
+// Add changelog Post Type
+
+function codex_custom_init() {
+  $labels = array(
+    'name' => 'Change',
+    'singular_name' => 'Change',
+    'add_new' => 'Add Change',
+    'add_new_item' => 'Add New Change',
+    'edit_item' => 'Edit',
+    'new_item' => 'New Change',
+    'all_items' => 'All Changes',
+    'view_item' => 'View Changelog',
+    'search_items' => 'Search Chnagelog',
+    'not_found' =>  'No changelog found',
+    'not_found_in_trash' => 'No changes found in Trash', 
+    'parent_item_colon' => '',
+    'menu_name' => 'Changelog'
+  );
+
+  $args = array(
+    'labels' => $labels,
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true, 
+    'show_in_menu' => true, 
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'change' ),
+    'capability_type' => 'post',
+    'has_archive' => true, 
+    'hierarchical' => false,
+    'menu_position' => 20,
+    'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+  ); 
+
+  register_post_type( 'change', $args );
+}
+function my_rewrite_flush() {
+    flush_rewrite_rules();
+}
+add_action( 'init', 'codex_custom_init' );
