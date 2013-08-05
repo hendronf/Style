@@ -84,6 +84,40 @@
 	"buffers":
 	[
 		{
+			"file": "content-search.php",
+			"settings":
+			{
+				"buffer_size": 2667,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 45 files for \"comment\"\n\n/Users/hendronf/Sites/Stile/wp-content/themes/Stile/functions.php:\n   55  	add_editor_style();\n   56  \n   57: 	// Adds RSS feed links to <head> for posts and comments.\n   58  	add_theme_support( 'automatic-feed-links' );\n   59  \n   ..\n   93  \n   94  	/*\n   95: 	 * Adds JavaScript to pages with the comment form to support\n   96: 	 * sites with threaded comments (when in use).\n   97  	 */\n   98: 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )\n   99: 		wp_enqueue_script( 'comment-reply' );\n  100  \n  101  	/*\n  ...\n  530      'hierarchical' => false,\n  531      'menu_position' => 20,\n  532:     'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )\n  533    ); \n  534  \n\n/Users/hendronf/Sites/Stile/wp-content/themes/Stile/languages/twentytwelve.pot:\n   61  msgstr \"\"\n   62  \n   63: #: comments.php:31\n   64  msgid \"One thought on &ldquo;%2$s&rdquo;\"\n   65  msgid_plural \"%1$s thoughts on &ldquo;%2$s&rdquo;\"\n   ..\n   67  msgstr[1] \"\"\n   68  \n   69: #: comments.php:42\n   70: msgid \"Comment navigation\"\n   71  msgstr \"\"\n   72  \n   73: #: comments.php:43\n   74: msgid \"&larr; Older Comments\"\n   75  msgstr \"\"\n   76  \n   77: #: comments.php:44\n   78: msgid \"Newer Comments &rarr;\"\n   79  msgstr \"\"\n   80  \n   81: #: comments.php:53\n   82: msgid \"Comments are closed.\"\n   83  msgstr \"\"\n   84  \n   ..\n  234  \n  235  #: functions.php:304\n  236: msgid \"Your comment is awaiting moderation.\"\n  237  msgstr \"\"\n  238  \n\n/Users/hendronf/Sites/Stile/wp-content/themes/Stile/rtl.css:\n   58  ----------------------------------------------- */\n   59  \n   60: .comment-content ol,\n   61: .comment-content ul {\n   62  	margin: 0 24px 0 0;\n   63  	margin: 0 1.714285714rem 0 0;\n   ..\n   69  \n   70  .entry-content li,\n   71: .comment-content li {\n   72  	margin: 0 24px 0 0;\n   73  	margin: 0 1.714285714rem 0 0;\n   74  }\n   75  .entry-content td,\n   76: .comment-content td {\n   77  	padding: 6px 0 6px 10px;\n   78  }\n   ..\n  102  \n  103  \n  104: /* =Comment styling\n  105  -------------------------------------------------------------- */\n  106  \n  107: .comments-area article header img {\n  108  	float: right;\n  109  }\n  110: .comments-area article header cite,\n  111: .comments-area article header time {\n  112  	margin-right: 85px;\n  113  	margin-right: 6.071428571rem;\n  114  	margin-left: auto;\n  115  }\n  116: .comments-area article header h4 {\n  117  	left: 0;\n  118  	right: auto;\n  119  }\n  120: .comments-area li.bypostauthor cite span {\n  121  	margin-right: 5px;\n  122  	margin-right: 0.357142857rem;\n  ...\n  124  }\n  125  \n  126: /* Comment form */\n  127: #respond h3#reply-title #cancel-comment-reply-link {\n  128  	margin-right: 10px;\n  129  	margin-right: 0.714285714rem;\n  ...\n  230  		border-left: none;\n  231  	}\n  232: 	.commentlist .children {\n  233  		margin-right: 48px;\n  234  		margin-right: 3.428571429rem;\n\n30 matches across 3 files\n\n\nSearching 45 files for \"comment\"\n\n/Users/hendronf/Sites/Stile/wp-content/themes/Stile/functions.php:\n   55  	add_editor_style();\n   56  \n   57: 	// Adds RSS feed links to <head> for posts and comments.\n   58  	add_theme_support( 'automatic-feed-links' );\n   59  \n   ..\n  518      'hierarchical' => false,\n  519      'menu_position' => 20,\n  520:     'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )\n  521    ); \n  522  \n\n/Users/hendronf/Sites/Stile/wp-content/themes/Stile/languages/twentytwelve.pot:\n   61  msgstr \"\"\n   62  \n   63: #: comments.php:31\n   64  msgid \"One thought on &ldquo;%2$s&rdquo;\"\n   65  msgid_plural \"%1$s thoughts on &ldquo;%2$s&rdquo;\"\n   ..\n   67  msgstr[1] \"\"\n   68  \n   69: #: comments.php:42\n   70: msgid \"Comment navigation\"\n   71  msgstr \"\"\n   72  \n   73: #: comments.php:43\n   74: msgid \"&larr; Older Comments\"\n   75  msgstr \"\"\n   76  \n   77: #: comments.php:44\n   78: msgid \"Newer Comments &rarr;\"\n   79  msgstr \"\"\n   80  \n   81: #: comments.php:53\n   82: msgid \"Comments are closed.\"\n   83  msgstr \"\"\n   84  \n   ..\n  234  \n  235  #: functions.php:304\n  236: msgid \"Your comment is awaiting moderation.\"\n  237  msgstr \"\"\n  238  \n\n/Users/hendronf/Sites/Stile/wp-content/themes/Stile/rtl.css:\n   58  ----------------------------------------------- */\n   59  \n   60: .comment-content ol,\n   61: .comment-content ul {\n   62  	margin: 0 24px 0 0;\n   63  	margin: 0 1.714285714rem 0 0;\n   ..\n   69  \n   70  .entry-content li,\n   71: .comment-content li {\n   72  	margin: 0 24px 0 0;\n   73  	margin: 0 1.714285714rem 0 0;\n   74  }\n   75  .entry-content td,\n   76: .comment-content td {\n   77  	padding: 6px 0 6px 10px;\n   78  }\n   ..\n  102  \n  103  \n  104: /* =Comment styling\n  105  -------------------------------------------------------------- */\n  106  \n  107: .comments-area article header img {\n  108  	float: right;\n  109  }\n  110: .comments-area article header cite,\n  111: .comments-area article header time {\n  112  	margin-right: 85px;\n  113  	margin-right: 6.071428571rem;\n  114  	margin-left: auto;\n  115  }\n  116: .comments-area article header h4 {\n  117  	left: 0;\n  118  	right: auto;\n  119  }\n  120: .comments-area li.bypostauthor cite span {\n  121  	margin-right: 5px;\n  122  	margin-right: 0.357142857rem;\n  ...\n  124  }\n  125  \n  126: /* Comment form */\n  127: #respond h3#reply-title #cancel-comment-reply-link {\n  128  	margin-right: 10px;\n  129  	margin-right: 0.714285714rem;\n  ...\n  230  		border-left: none;\n  231  	}\n  232: 	.commentlist .children {\n  233  		margin-right: 48px;\n  234  		margin-right: 3.428571429rem;\n\n25 matches across 3 files\n",
+			"settings":
+			{
+				"buffer_size": 5580,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "image.php",
+			"settings":
+			{
+				"buffer_size": 4044,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "functions.php",
+			"settings":
+			{
+				"buffer_size": 17500,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "style.less",
 			"settings":
 			{
@@ -96,14 +130,6 @@
 			"settings":
 			{
 				"buffer_size": 10520,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "functions.php",
-			"settings":
-			{
-				"buffer_size": 19399,
 				"line_ending": "Unix"
 			}
 		}
@@ -132,18 +158,27 @@
 	},
 	"file_history":
 	[
+		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/index.php",
+		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/page.php",
+		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/single.php",
+		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/category.php",
+		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/content-image.php",
+		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/content-link.php",
+		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/content.php",
+		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/content-quote.php",
+		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/content-status.php",
+		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/archive.php",
+		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/footer.php",
+		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/sidebar.php",
+		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/functions.php",
 		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/header.php",
 		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/js/navigation-ck.js",
-		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/footer.php",
-		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/single.php",
-		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/page.php",
 		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/content-aside.php",
 		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/content-search.php",
 		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/page-templates/colors.php",
 		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/color.html",
 		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/templates/primary-colors.php",
 		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/js/navigation.js",
-		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/functions.php",
 		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/style.less",
 		"/Users/hendronf/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
 		"/Users/hendronf/Sites/Stile/wp-content/themes/Stile/style.css",
@@ -165,9 +200,10 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
+			"/Users/hendronf/Sites/Stile/wp-content/themes/Stile"
 		]
 	},
 	"find_state":
@@ -175,6 +211,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"comment",
+			"?>\n",
+			"comment",
+			"post",
 			".alert",
 			"entry-content",
 			">\n",
@@ -211,16 +251,356 @@
 	"groups":
 	[
 		{
-			"sheets":
-			[
-			]
-		},
-		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "content-search.php",
+					"settings":
+					{
+						"buffer_size": 2667,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1123,
+								1125
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 56.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"settings":
+					{
+						"buffer_size": 5580,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										192,
+										199
+									],
+									[
+										333,
+										340
+									],
+									[
+										388,
+										395
+									],
+									[
+										454,
+										461
+									],
+									[
+										493,
+										500
+									],
+									[
+										536,
+										543
+									],
+									[
+										735,
+										742
+									],
+									[
+										884,
+										891
+									],
+									[
+										1051,
+										1058
+									],
+									[
+										1081,
+										1088
+									],
+									[
+										1136,
+										1143
+									],
+									[
+										1179,
+										1186
+									],
+									[
+										1224,
+										1231
+									],
+									[
+										1260,
+										1267
+									],
+									[
+										1312,
+										1319
+									],
+									[
+										1342,
+										1349
+									],
+									[
+										1450,
+										1457
+									],
+									[
+										1644,
+										1651
+									],
+									[
+										1672,
+										1679
+									],
+									[
+										1807,
+										1814
+									],
+									[
+										1937,
+										1944
+									],
+									[
+										2033,
+										2040
+									],
+									[
+										2138,
+										2145
+									],
+									[
+										2212,
+										2219
+									],
+									[
+										2255,
+										2262
+									],
+									[
+										2401,
+										2408
+									],
+									[
+										2490,
+										2497
+									],
+									[
+										2630,
+										2637
+									],
+									[
+										2685,
+										2692
+									],
+									[
+										2825,
+										2832
+									],
+									[
+										3138,
+										3145
+									],
+									[
+										3371,
+										3378
+									],
+									[
+										3520,
+										3527
+									],
+									[
+										3687,
+										3694
+									],
+									[
+										3717,
+										3724
+									],
+									[
+										3772,
+										3779
+									],
+									[
+										3815,
+										3822
+									],
+									[
+										3860,
+										3867
+									],
+									[
+										3896,
+										3903
+									],
+									[
+										3948,
+										3955
+									],
+									[
+										3978,
+										3985
+									],
+									[
+										4086,
+										4093
+									],
+									[
+										4280,
+										4287
+									],
+									[
+										4308,
+										4315
+									],
+									[
+										4443,
+										4450
+									],
+									[
+										4573,
+										4580
+									],
+									[
+										4669,
+										4676
+									],
+									[
+										4774,
+										4781
+									],
+									[
+										4848,
+										4855
+									],
+									[
+										4891,
+										4898
+									],
+									[
+										5037,
+										5044
+									],
+									[
+										5126,
+										5133
+									],
+									[
+										5266,
+										5273
+									],
+									[
+										5321,
+										5328
+									],
+									[
+										5461,
+										5468
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								2946,
+								2946
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"output_tag": 2,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 167.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "image.php",
+					"settings":
+					{
+						"buffer_size": 4044,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3925,
+								3925
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 849.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "functions.php",
+					"settings":
+					{
+						"buffer_size": 17500,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3364,
+								3364
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1184.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"sheets":
+			[
+				{
+					"buffer": 4,
 					"file": "style.less",
 					"settings":
 					{
@@ -241,13 +621,13 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1113.0,
+						"translation.y": 1505.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 5,
 					"file": "buttons.less",
 					"settings":
 					{
@@ -269,34 +649,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2833.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "functions.php",
-					"settings":
-					{
-						"buffer_size": 19399,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								18280,
-								18280
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 7749.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
