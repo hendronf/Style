@@ -1,0 +1,12 @@
+{
+  "name": "Stile",
+  "version": "0.0.0",
+  "description": "ERROR: No README.md file found!",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hendronf/Stile.git"
+  },
+  "devDependencies": {
+    "less": "1.4.*"
+  }
+}
