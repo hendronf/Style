@@ -91,6 +91,11 @@ require( get_template_directory() . '/inc/custom-header.php' );
 function twentytwelve_scripts_styles() {
 	global $wp_styles;
 
+    /*
+     * Adds JavaScript for handling the navigation menu hide-and-show behavior.
+     */
+    wp_enqueue_script( 'twentytwelve-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '1.0', true );
+
 	/*
 	 * Loads our special font CSS file.
 	 *
@@ -424,10 +429,10 @@ if (!current_user_can('edit_posts')) {
 
 // Customizing Nav Menu's sub menus
 class My_Walker_Nav_Menu extends Walker_Nav_Menu {
-  function start_lvl(&$output, $depth) {
-    $indent = str_repeat("\t", $depth);
-    $output .= "\n$indent<ul class=\"nav-sub-menu\">\n";
-  }
+    function start_lvl(&$output, $depth) {
+        $indent = str_repeat("\t", $depth);
+        $output .= "\n$indent<ul class=\"nav-sub-menu\">\n";
+    }
 }
 
 // Custom Meta Boxes for CSS in pages.
