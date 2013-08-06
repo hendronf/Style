@@ -55,7 +55,7 @@ http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/
 @lightgray: #e8e8e8; /* Light Gray, used for background, hr's and other elements. */
 @darkgray: #717171; /* used for muted text on a lightgray background. Footer links */
 @defaulttext: #333; /* Default text color used in the wire, close to black but not quite */
-@defaulttextblue: #000033; /* Default text color used throughout the site. We should change the text color throughout the site to be #defaulttext and use this color for the text color on activity labels */
+@defaulttextblue: #000033; /* Default text color used throughout the site. */
 @linkblue: #2469a0; /* This is the default link blue color. It is also used as the text color on activity labels */
 
 /*Brand Colors*/
@@ -107,7 +107,21 @@ http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/
 /* =Reset
 -------------------------------------------------------------- */
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, 
+object, iframe, h1, h2, h3, h4, 
+h5, h6, p, blockquote, pre, a, 
+abbr, acronym, address, big, cite, 
+code, del, dfn, em, img, ins, kbd, 
+q, s, samp, small, strike, strong, 
+sub, sup, tt, var, b, u, i, center, 
+dl, dt, dd, ol, ul, li, fieldset, 
+form, label, legend, table, caption, 
+tbody, tfoot, thead, tr, th, td, 
+article, aside, canvas, details, 
+embed, figure, figcaption, footer, 
+header, hgroup, menu, nav, output, 
+ruby, section, summary, time, mark, 
+audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -445,6 +459,14 @@ a.logouturl{
 margin: 1rem 0;
 border-bottom: 1px solid @lightgray;
 padding: 0 0 1rem 0;
+}
+
+.wp-caption-text {
+	font-size: 0.75rem;
+	color: @darkgray;
+	text-align: center;
+	border-top: 1px solid @lightgray;
+	padding-top: 0.5rem;
 }
 
 /*STYELS FOR THE COLOR BOXES*/

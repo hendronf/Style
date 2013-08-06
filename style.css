@@ -1,5 +1,5 @@
 /*
-Theme Name: Stile
+Theme Name: Style
 Theme URI: hhttps://github.com/hendronf/Stile
 Author: Fearghal Hendron
 Author URI: http://fearghal.co.uk
@@ -457,6 +457,13 @@ a.logouturl {
   margin: 1rem 0;
   border-bottom: 1px solid #e8e8e8;
   padding: 0 0 1rem 0;
+}
+.wp-caption-text {
+  font-size: 0.75rem;
+  color: #717171;
+  text-align: center;
+  border-top: 1px solid #e8e8e8;
+  padding-top: 0.5rem;
 }
 /*STYELS FOR THE COLOR BOXES*/
 .color {

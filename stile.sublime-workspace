@@ -113,7 +113,7 @@
 			"file": "functions.php",
 			"settings":
 			{
-				"buffer_size": 17500,
+				"buffer_size": 21452,
 				"line_ending": "Unix"
 			}
 		},
@@ -121,7 +121,7 @@
 			"file": "style.less",
 			"settings":
 			{
-				"buffer_size": 8076,
+				"buffer_size": 8216,
 				"line_ending": "Unix"
 			}
 		},
@@ -200,7 +200,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"/Users/hendronf/Sites/Stile/wp-content/themes/Stile"
@@ -251,7 +251,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -572,15 +572,15 @@
 					"file": "functions.php",
 					"settings":
 					{
-						"buffer_size": 17500,
+						"buffer_size": 21452,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3364,
-								3364
+								17850,
+								17850
 							]
 						],
 						"settings":
@@ -589,7 +589,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1184.0,
+						"translation.y": 7781.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -597,6 +597,7 @@
 			]
 		},
 		{
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -604,15 +605,15 @@
 					"file": "style.less",
 					"settings":
 					{
-						"buffer_size": 8076,
+						"buffer_size": 8216,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2653,
-								2373
+								7732,
+								7732
 							]
 						],
 						"settings":
@@ -620,8 +621,8 @@
 							"syntax": "Packages/CSS/CSS.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 1505.0,
+						"translation.x": 28.0,
+						"translation.y": 6303.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
