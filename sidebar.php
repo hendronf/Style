@@ -14,5 +14,22 @@
 		</hgroup>
 	</header><!-- #masthead -->
 			<!-- <h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3> -->
+            <?php add_filter( 'wp_nav_menu_objects', 'special_nav_classes' ); ?>
+            <?php function special_nav_classes($items) {
+                    $parents = array();
+                    foreach ( $items as $item ) {
+                        if ( $item->menu_item_parent && $item->menu_item_parent > 0 && !in_array( $item->menu_item_parent, $parents ) ) {
+                            $parents[] = $item->menu_item_parent;
+                        }
+                    }
+
+                    foreach ( $items as $item ) {
+                        if ( in_array( $item->ID, $parents ) ) {
+                            $item->classes[] = 'menu-parent-item';
+                        }
+                    }
+
+                    return $items;
+                } ?>
 			<?php wp_nav_menu( array( 'theme_location' => 'sidebar', 'menu_class' => 'nav-menu', 'walker' => new My_Walker_Nav_Menu(), ) ); ?>
 		</nav><!-- #site-navigation -->
