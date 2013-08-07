@@ -2,3 +2,7 @@ node_modules
 .DS_Store
 stile.sublime-project
 stile.sublime-workspace
+
+*.sublime-workspace
+
+admin-options.php
