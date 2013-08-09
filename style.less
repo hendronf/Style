@@ -243,7 +243,9 @@ img {
 	content: "";
 }
 
-/*The following code is code that Fearghal has vomitted up. Please excuse it and please refactor it! ;) */
+/**
+ * The following code is code that Fearghal has vomitted up. Please excuse it and please refactor it! ;)
+ */
 
 /* States */
 .is-hidden {
@@ -251,7 +253,6 @@ img {
 }
 
 /* layout */
-
 body {
 	top: 0;
 	right: 0;
@@ -259,42 +260,6 @@ body {
 	left: 0;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
    	font-weight: 300;
-}
-
-.header-logo {
-	width: 15rem;
-	padding: 3rem 1.5rem 1.5rem 1.5rem;
-}
-
-.main-navigation {
-	width: 18rem;
-	background-color:@lightgray;
-	border-right: 1px solid #D1D1D1;
-	bottom: 0;
-	top: 0;
-	float: left;
-	position: fixed;
-	overflow: auto;
-}
-
-.main-menu-nav-container {
-	margin-top: 3rem!important;
-	 position: relative;
-}
-
-.nav-menu {
-	z-index: -1;
-	padding-left: 1.25rem;
-}
-
-.nav-sub-menu {
-	padding: 0.25rem 0rem 0.25rem 1rem;
-}
-
-.site-header {
-	min-height: 3rem;
-	width: 100%;
-	top: 0;
 }
 
 .site-search {
@@ -338,33 +303,75 @@ width: 30rem;
 height: 30rem;
 }
 
-code	{
-	overflow: auto;
-	width: 100%;
-	white-space: normal;
+// Header
+// -------------
+.header-logo {
+	width: 15rem;
+	padding: 3rem 1.5rem 1.5rem 1.5rem;
 }
-
-/*end layout*/
 
 .site-header {
 	background-color: #39465A;
+	min-height: 3rem;
+	width: 100%;
 	z-index: 1;
 	top: 0;
 }
 
-
-blockquote {
-	background-color: @lightgray;
-	padding: 0.5rem;
-	border-left: 2px solid #39465A;;
-	margin: 0.5rem 0;
+// Navigation
+// -----------------------
+.main-navigation {
+	width: 18rem;
+	background-color:@lightgray;
+	border-right: 1px solid #D1D1D1;
+	bottom: 0;
+	top: 0;
+	float: left;
+	position: fixed;
+	overflow: auto;
 }
 
-blockquote p {
-	margin:0;
+.main-menu-nav-container {
+	margin-top: 3rem!important;
+	 position: relative;
 }
 
-.menu-main-container{
+.nav-menu {
+	z-index: -1;
+	padding-left: 1.6rem;
+}
+
+// Styling for the menu item 'open/closed' arrows
+// -------------------------
+.nav-menu .menu-parent-item {
+    margin-bottom: 3px;
+}
+
+.nav-menu > .menu-parent-item a {
+    margin-left: 6px;
+}
+
+.nav-menu > .menu-parent-item:before {
+    content: '▶';
+    font-size: 0.5rem;
+    vertical-align: middle;
+}
+
+// Prevents a small horizontal 'jumping' when arrow changes to open state
+.nav-menu > .menu-parent-item.submenu-open {
+    margin-left: -2px;
+}
+
+.nav-menu > .menu-parent-item.submenu-open:before {
+    content: '▼';
+    font-size: 0.6rem;
+}
+
+.nav-sub-menu {
+	padding: 0.25rem 0rem 0.25rem 1.5rem;
+}
+
+.menu-main-container {
 	margin-top: 5rem;
 	margin-left: 1rem;
 	width: 100%;
@@ -399,6 +406,22 @@ blockquote p {
 }
 
 /*General Styles*/
+code {
+	overflow: auto;
+	width: 100%;
+	white-space: normal;
+}
+
+blockquote {
+	background-color: @lightgray;
+	padding: 0.5rem;
+	border-left: 2px solid #39465A;;
+	margin: 0.5rem 0;
+}
+
+blockquote p {
+	margin:0;
+}
 
 a, a:hover {
 	color: #2469A0;
