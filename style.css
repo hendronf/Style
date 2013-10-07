@@ -318,6 +318,7 @@ body {
   width: 18rem;
   text-align: center;
   background-color: #e8e8e8;
+  border-right: 1px solid #ddd;
 }
 #content {
   padding: 2.5rem 2rem 2.5rem 20rem;
