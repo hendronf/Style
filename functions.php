@@ -491,6 +491,10 @@ function pears_save_post( $post_id ) {
 // Disable visual editor by default
 add_filter ( 'user_can_richedit' , create_function ( '$a' , 'return false;' ) , 50 );
 
+// Default Image Instert Image to Link: None
+
+update_option('image_default_link_type','none');
+
 // Add changelog Post Type
 
 function codex_custom_init() {
