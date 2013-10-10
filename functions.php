@@ -469,7 +469,8 @@ function pears_save_post( $post_id ) {
 			
 	// verify data came from style meta box
   	if ( !wp_verify_nonce( $_POST['style_noncename'], plugin_basename( __FILE__ ) ) )
-		return;			
+		return;	
+				
 	
   	// Check user permissions
   	if ( 'post' == $_POST['post_type'] ) {
