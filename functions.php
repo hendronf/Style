@@ -596,8 +596,8 @@ function custom_menu_order($menu_ord) {
 	return array(
 		'index.php', // Dashboard
 		'edit.php?post_type=page', // Pages
-		'edit.php?post_type=documentation', //documentation
 		'edit.php?post_type=change', //documentation
+		'edit.php?post_type=documentation', //documentation
 		'upload.php', // Media
 		'separator1', // First separator
 		'themes.php', // Appearance
@@ -610,5 +610,11 @@ function custom_menu_order($menu_ord) {
 }
 add_filter('custom_menu_order', 'custom_menu_order'); // Activate custom_menu_order
 add_filter('menu_order', 'custom_menu_order');
+
+// Remove Post from the wordpress New menu in the admin menubar.
+add_action( 'admin_bar_menu', 'remove_posts_item', 999 );
+function remove_posts_item( $wp_admin_bar ) {
+	$wp_admin_bar->remove_node( 'new-post' );
+}
 
 ?>
