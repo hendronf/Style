@@ -357,7 +357,7 @@ body {
 .nav-menu {
   z-index: -1;
 }
-.nav-menu .menu-parent-item {
+.menu-item-object-page {
   margin-bottom: 3px;
   padding-top: 0.45rem;
   padding-bottom: 0.45rem;
@@ -377,14 +377,18 @@ body {
 .nav-menu > .menu-parent-item.submenu-open {
   margin-left: -2px;
 }
+
 .nav-menu > .menu-parent-item.submenu-open:before {
   content: '▼';
   font-size: 0.7rem;
   vertical-align: middle;
 }
 .nav-sub-menu {
-  padding: 0.25rem 0rem 0.25rem 1.5rem;
   line-height: 1.5rem;
+  padding-top: 0.5rem;
+}
+.nav-sub-menu li {
+  padding: 0rem 0rem 0rem 1.6rem;
 }
 .menu-main-container {
   margin-top: 5rem;
