@@ -516,19 +516,19 @@ add_action('admin_menu', 'remove_admin_menu_items');
 // Add changelog Post Type
 function codex_custom_init() {
   $labels_change = array(
-    'name' => 'Change',
+    'name' => 'Change Log',
     'singular_name' => 'Change',
     'add_new' => 'Add Change',
     'add_new_item' => 'Add New Change',
     'edit_item' => 'Edit',
     'new_item' => 'New Change',
     'all_items' => 'All Changes',
-    'view_item' => 'View Changelog',
-    'search_items' => 'Search Chnagelog',
+    'view_item' => 'View Change',
+    'search_items' => 'Search Changes',
     'not_found' =>  'No changelog found',
     'not_found_in_trash' => 'No changes found in Trash', 
     'parent_item_colon' => '',
-    'menu_name' => 'Changelog'
+    'menu_name' => 'Change Log'
   );
 
   $args_change = array(
@@ -595,11 +595,12 @@ function custom_menu_order($menu_ord) {
 	
 	return array(
 		'index.php', // Dashboard
+		'separator1', // First separator
 		'edit.php?post_type=page', // Pages
+		'upload.php', // Media
 		'edit.php?post_type=change', //documentation
 		'edit.php?post_type=documentation', //documentation
-		'upload.php', // Media
-		'separator1', // First separator
+		'separator2', // Second separator
 		'themes.php', // Appearance
 		'plugins.php', // Plugins
 		'users.php', // Users
