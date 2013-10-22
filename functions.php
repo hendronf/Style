@@ -493,13 +493,29 @@ function pears_save_post( $post_id ) {
 add_filter ( 'user_can_richedit' , create_function ( '$a' , 'return false;' ) , 50 );
 
 // Default Image Instert Image to Link: None
-
 update_option('image_default_link_type','none');
 
-// Add changelog Post Type
 
+/*-----------------------------------------------------------------------------------*/
+/* Remove Unwanted Admin Menu Items */
+/*-----------------------------------------------------------------------------------*/
+
+function remove_admin_menu_items() {
+	$remove_menu_items = array(__('Comments'),__('Posts'));
+	global $menu;
+	end ($menu);
+	while (prev($menu)){
+		$item = explode(' ',$menu[key($menu)][0]);
+		if(in_array($item[0] != NULL?$item[0]:"" , $remove_menu_items)){
+		unset($menu[key($menu)]);}
+	}
+}
+
+add_action('admin_menu', 'remove_admin_menu_items');
+
+// Add changelog Post Type
 function codex_custom_init() {
-  $labels = array(
+  $labels_change = array(
     'name' => 'Change',
     'singular_name' => 'Change',
     'add_new' => 'Add Change',
@@ -515,8 +531,8 @@ function codex_custom_init() {
     'menu_name' => 'Changelog'
   );
 
-  $args = array(
-    'labels' => $labels,
+  $args_change = array(
+    'labels' => $labels_change,
     'public' => true,
     'publicly_queryable' => true,
     'show_ui' => true, 
@@ -530,10 +546,69 @@ function codex_custom_init() {
     'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
   ); 
 
-  register_post_type( 'change', $args );
+  register_post_type( 'change', $args_change );
 }
+{
+  $labels_documentation = array(
+    'name' => 'Documentation',
+    'singular_name' => 'Documentation',
+    'add_new' => 'Add Documentation',
+    'add_new_item' => 'Add New Documentation',
+    'edit_item' => 'Edit',
+    'new_item' => 'New Documentation',
+    'all_items' => 'All Documentation',
+    'view_item' => 'View Documentation',
+    'search_items' => 'Search Documentation',
+    'not_found' =>  'No Documentation found',
+    'not_found_in_trash' => 'No Documentation found in Trash', 
+    'parent_item_colon' => '',
+    'menu_name' => 'Documentation'
+  );
+
+  $args_documentation = array(
+    'labels' => $labels_documentation,
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true, 
+    'show_in_menu' => true, 
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'documentation' ),
+    'capability_type' => 'post',
+    'has_archive' => true, 
+    'hierarchical' => false,
+    'menu_position' => 30,
+    'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+  ); 
+
+  register_post_type( 'documentation', $args_documentation );
+}
+
 function my_rewrite_flush() {
     flush_rewrite_rules();
 }
 add_action( 'init', 'codex_custom_init' );
+
+
+// Custom menu order for wordpress backend. 
+function custom_menu_order($menu_ord) {
+	if (!$menu_ord) return true;
+	
+	return array(
+		'index.php', // Dashboard
+		'edit.php?post_type=page', // Pages
+		'edit.php?post_type=documentation', //documentation
+		'edit.php?post_type=change', //documentation
+		'upload.php', // Media
+		'separator1', // First separator
+		'themes.php', // Appearance
+		'plugins.php', // Plugins
+		'users.php', // Users
+		'tools.php', // Tools
+		'options-general.php', // Settings
+		'separator-last', // Last separator
+	);
+}
+add_filter('custom_menu_order', 'custom_menu_order'); // Activate custom_menu_order
+add_filter('menu_order', 'custom_menu_order');
+
 ?>
