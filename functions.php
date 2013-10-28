@@ -379,13 +379,15 @@ function twentytwelve_customize_preview_js() {
 }
 add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
 
-
+// *************************************************************************
+// Login Page Customisations
+// *************************************************************************
 
 //  Custom Login Logo and style
 function my_login_logo() { ?>
     <style type="text/css">
         body.login div#login h1 a {
-            background-image: url(<?php echo get_bloginfo( 'template_directory' ) ?>/img/logo.png);
+            background-image: url('<?php header_image(); ?>');
             padding-bottom: 30px;
             background-size: inherit;
         }
@@ -403,6 +405,12 @@ return '';
 }
 
 
+// Custom Login Message
+
+add_action('login_form', 'login_form_message');
+function login_form_message() {
+	echo '<p class="login_form_message">Please <a href="mailto:fearghal.hendron@internations.org">contact me</a> if you need login details.</p>';
+}
 
 // Redirect to homepage after login
 
@@ -412,14 +420,9 @@ function admin_default_page() {
 
 add_filter('login_redirect', 'admin_default_page');
 
-
-
-// Custom Login Message
-
-add_action('login_form', 'login_form_message');
-function login_form_message() {
-	echo '<p class="login_form_message">Please <a href="mailto:fearghal.hendron@internations.org">contact me</a> if you need login details.</p>';
-}
+// *************************************************************************
+// End of Login Page Customisations
+// *************************************************************************
 
 // show admin bar only for admins and editors
 if (!current_user_can('edit_posts')) {
