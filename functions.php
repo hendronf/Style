@@ -592,7 +592,7 @@ function my_rewrite_flush() {
 add_action( 'init', 'codex_custom_init' );
 
 
-// Custom menu order for wordpress backend. 
+// Custom menu order for wordpress backend sidebar nav. 
 function custom_menu_order($menu_ord) {
 	if (!$menu_ord) return true;
 	
@@ -618,7 +618,75 @@ add_filter('menu_order', 'custom_menu_order');
 // Remove Post from the wordpress New menu in the admin menubar.
 add_action( 'admin_bar_menu', 'remove_posts_item', 999 );
 function remove_posts_item( $wp_admin_bar ) {
-	$wp_admin_bar->remove_node( 'new-post' );
+	$wp_admin_bar->remove_node( 'new-post', 'new-documentation', 'new-change' );
+}
+// *******************************************************
+// Add documentation and Changelog menus to the Admin bar.
+// *******************************************************
+add_action('admin_bar_menu', 'add_documantation_items', 100);
+function add_documantation_items($admin_bar){
+	$admin_bar->
+		add_menu( array(
+		'id'    => 'documentation_link',
+		'title' => 'Documentation',
+		'href'  => '/documentation/',
+		'meta'  => array(
+			'title' => __('A how guide for Style. E.g. Add and remove users / add a new page, etc.'),
+		),
+	));
+	$admin_bar->add_menu( array(
+	'id'    => 'view_dpocumentation_link',
+		'parent' => 'documentation_link',
+		'title' => 'View Documentation',
+		'href'  => '/documentation/',
+		'meta'  => array(
+			'title' => __('Get help in the Documentation'),
+			'class' => 'view_documentation_link'
+		),
+	));
+	$admin_bar->add_menu( array(
+		'id'    => 'add_documentation_link',
+		'parent' => 'documentation_link',
+		'title' => 'Add Documentation',
+		'href'  => '/wp-admin/post-new.php?post_type=documentation',
+		'meta'  => array(
+			'title' => __('Add to the Style Documentation'),
+			'class' => 'add_documentation_link'
+		),
+	));
+}
+
+add_action('admin_bar_menu', 'add_changelog_items', 100);
+function add_changelog_items($admin_bar){
+	$admin_bar->
+		add_menu( array(
+		'id'    => 'changelog_link',
+		'title' => 'Change Log',
+		'href'  => '/change/',
+		'meta'  => array(
+			'title' => __('View the changes in Style'),
+		),
+	));
+			$admin_bar->add_menu( array(
+	'id'    => 'view_changelog_link',
+		'parent' => 'changelog_link',
+		'title' => 'View Change Log',
+		'href'  => '/change/',
+		'meta'  => array(
+			'title' => __('Read the Change Log'),
+			'class' => 'view_changelog_link'
+		),
+	));
+	$admin_bar->add_menu( array(
+		'id'    => 'add_changelog_link',
+		'parent' => 'changelog_link',
+		'title' => 'Add Change',
+		'href'  => '/wp-admin/post-new.php?post_type=change',
+		'meta'  => array(
+			'title' => __('Add a change to the Change Log'),
+			'class' => 'add_changelog_link'
+		),
+	));
 }
 
 ?>

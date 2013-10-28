@@ -281,9 +281,12 @@ img {
  * The following code is code that Fearghal has vomitted up. Please excuse it and please refactor it! ;)
  */
 /* States */
-.is-hidden {
+.is-hidden, #wp-admin-bar-new-change, #wp-admin-bar-new-documentation {
   display: none !important;
 }
+
+
+
 /* layout */
 body {
   top: 0;
