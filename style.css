@@ -360,7 +360,7 @@ body {
 .nav-menu {
   z-index: -1;
 }
-.menu-item-object-page {
+.menu-item-object-page, .menu-item-object-custom {
   margin-bottom: 3px;
   padding-top: 0.45rem;
   padding-bottom: 0.45rem;
