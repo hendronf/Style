@@ -333,8 +333,7 @@ body {
   height: 30rem;
 }
 .header-logo {
-  width: 15rem;
-  padding: 3rem 1.5rem 1.5rem 1.5rem;
+  padding: 3rem 1rem 1rem 1rem;
 }
 .site-header {
   background-color: #39465A;
