@@ -502,6 +502,7 @@ update_option('image_default_link_type','none');
 function style_remove_new_menu() {
     global $wp_admin_bar;
     $wp_admin_bar->remove_menu('new-content'); // This removes the complete menu “Add New”.
+    $wp_admin_bar->remove_menu('comments'); // This removes the comments link
 }
 add_action( 'wp_before_admin_bar_render', 'style_remove_new_menu' );
 
