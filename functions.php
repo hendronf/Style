@@ -498,20 +498,15 @@ add_filter ( 'user_can_richedit' , create_function ( '$a' , 'return false;' ) , 
 // Default Image Instert Image to Link: None
 update_option('image_default_link_type','none');
 
-
-/*-----------------------------------------------------------------------------------*/
-/* Remove Unwanted Admin Menu Items */
-/*-----------------------------------------------------------------------------------*/
-
-function OXP_admin_bar_edit() {
+// Remove New Menu from Admin Bar.
+function style_remove_new_menu() {
     global $wp_admin_bar;
     $wp_admin_bar->remove_menu('new-content'); // This removes the complete menu “Add New”.
 }
-add_action( 'wp_before_admin_bar_render', 'OXP_admin_bar_edit' );
+add_action( 'wp_before_admin_bar_render', 'style_remove_new_menu' );
 
 
-
-// Add changelog Post Type
+// Add Custom Post Types
 function codex_custom_init() {
   $labels_change = array(
     'name' => 'Change Log',
@@ -610,10 +605,15 @@ function custom_menu_order($menu_ord) {
 add_filter('custom_menu_order', 'custom_menu_order'); // Activate custom_menu_order
 add_filter('menu_order', 'custom_menu_order');
 
-// Remove Post from the wordpress New menu in the admin menubar.
-add_action( 'admin_bar_menu', 'remove_posts_item', 999 );
-function remove_posts_item( $wp_admin_bar ) {
-	$wp_admin_bar->remove_node( 'new-post', 'new-documentation', 'new-change' );
+
+/*-----------------------------------------------------------------------------------*/
+/* Remove Unwanted Admin Menu Items */
+/*-----------------------------------------------------------------------------------*/
+add_action( 'admin_menu', 'style_remove_menu_pages' );
+
+function style_remove_menu_pages() {
+		remove_menu_page('edit.php');
+		remove_menu_page('edit-comments.php');	
 }
 // *******************************************************
 // Add Custon New, Documentation and Changelog menus to the Admin bar.
