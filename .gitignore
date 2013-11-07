@@ -1,11 +1,7 @@
 node_modules
 .DS_Store
-stile.sublime-project
-stile.sublime-workspace
-
+*.sublime-project
 *.sublime-workspace
 
 admin-options.php
 buttons.less
-
-stile.sublime-workspace
