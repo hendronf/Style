@@ -28,20 +28,7 @@
 if ( ! isset( $content_width ) )
 	$content_width = 625;
 
-/**
- * Sets up theme defaults and registers the various WordPress features that
- * Twenty Twelve supports.
- *
- * @uses load_theme_textdomain() For translation/localization support.
- * @uses add_editor_style() To add a Visual Editor stylesheet.
- * @uses add_theme_support() To add support for post thumbnails, automatic feed links,
- * 	custom background, and post formats.
- * @uses register_nav_menu() To add support for navigation menus.
- * @uses set_post_thumbnail_size() To set a custom post thumbnail size.
- *
- * @since Twenty Twelve 1.0
- */
-function twentytwelve_setup() {
+function style_setup() {
 	/*
 	 * Makes Twenty Twelve available for translation.
 	 *
@@ -49,34 +36,15 @@ function twentytwelve_setup() {
 	 * If you're building a theme based on Twenty Twelve, use a find and replace
 	 * to change 'twentytwelve' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'twentytwelve', get_template_directory() . '/languages' );
 
 	// This theme styles the visual editor with editor-style.css to match the theme style.
 	add_editor_style();
 
-	// Adds RSS feed links to <head> for posts and comments.
-	add_theme_support( 'automatic-feed-links' );
-
-	// This theme supports a variety of post formats.
-	add_theme_support( 'post-formats', array( 'aside', 'image', 'link', 'quote', 'status' ) );
-
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menu( 'primary', __( 'Primary Menu', 'twentytwelve' ) );
-	register_nav_menu( 'sidebar', __( 'Sidebar Menu', 'twentytwelve' ) );
 
-	/*
-	 * This theme supports custom background color and image, and here
-	 * we also set up the default background color.
-	 */
-	add_theme_support( 'custom-background', array(
-		'default-color' => 'e6e6e6',
-	) );
-
-	// This theme uses a custom image size for featured images, displayed on "standard" posts.
-	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 624, 9999 ); // Unlimited height, soft crop
 }
-add_action( 'after_setup_theme', 'twentytwelve_setup' );
+add_action( 'after_setup_theme', 'style_setup' );
 
 /**
  * Adds support for a custom header image.
@@ -109,30 +77,6 @@ function twentytwelve_scripts_styles() {
 	 * add_action( 'wp_enqueue_scripts', 'mytheme_dequeue_fonts', 11 );
 	 */
 
-	/* translators: If there are characters in your language that are not supported
-	   by Open Sans, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Open Sans font: on or off', 'twentytwelve' ) ) {
-		$subsets = 'latin,latin-ext';
-
-		/* translators: To add an additional Open Sans character subset specific to your language, translate
-		   this to 'greek', 'cyrillic' or 'vietnamese'. Do not translate into your own language. */
-		$subset = _x( 'no-subset', 'Open Sans font: add new subset (greek, cyrillic, vietnamese)', 'twentytwelve' );
-
-		if ( 'cyrillic' == $subset )
-			$subsets .= ',cyrillic,cyrillic-ext';
-		elseif ( 'greek' == $subset )
-			$subsets .= ',greek,greek-ext';
-		elseif ( 'vietnamese' == $subset )
-			$subsets .= ',vietnamese';
-
-		$protocol = is_ssl() ? 'https' : 'http';
-		$query_args = array(
-			'family' => 'Open+Sans:400italic,700italic,400,700',
-			'subset' => $subsets,
-		);
-		wp_enqueue_style( 'twentytwelve-fonts', add_query_arg( $query_args, "$protocol://fonts.googleapis.com/css" ), array(), null );
-	}
-
 	/*
 	 * Loads our main stylesheet.
 	 */
@@ -156,27 +100,6 @@ add_action( 'wp_enqueue_scripts', 'twentytwelve_scripts_styles' );
  * @param string $sep Optional separator.
  * @return string Filtered title.
  */
-function twentytwelve_wp_title( $title, $sep ) {
-	global $paged, $page;
-
-	if ( is_feed() )
-		return $title;
-
-	// Add the site name.
-	$title .= get_bloginfo( 'name' );
-
-	// Add the site description for the home/front page.
-	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) )
-		$title = "$title $sep $site_description";
-
-	// Add a page number if necessary.
-	if ( $paged >= 2 || $page >= 2 )
-		$title = "$title $sep " . sprintf( __( 'Page %s', 'twentytwelve' ), max( $paged, $page ) );
-
-	return $title;
-}
-add_filter( 'wp_title', 'twentytwelve_wp_title', 10, 2 );
 
 /**
  * Makes our wp_nav_menu() fallback -- wp_page_menu() -- show a home link.
@@ -297,51 +220,6 @@ function twentytwelve_entry_meta() {
 endif;
 
 /**
- * Extends the default WordPress body class to denote:
- * 1. Using a full-width layout, when no active widgets in the sidebar
- *    or full-width template.
- * 2. Front Page template: thumbnail in use and number of sidebars for
- *    widget areas.
- * 3. White or empty background color to change the layout and spacing.
- * 4. Custom fonts enabled.
- * 5. Single or multiple authors.
- *
- * @since Twenty Twelve 1.0
- *
- * @param array Existing class values.
- * @return array Filtered class values.
- */
-function twentytwelve_body_class( $classes ) {
-	$background_color = get_background_color();
-
-	if ( ! is_active_sidebar( 'sidebar-1' ) || is_page_template( 'page-templates/full-width.php' ) )
-		$classes[] = 'full-width';
-
-	if ( is_page_template( 'page-templates/front-page.php' ) ) {
-		$classes[] = 'template-front-page';
-		if ( has_post_thumbnail() )
-			$classes[] = 'has-post-thumbnail';
-		if ( is_active_sidebar( 'sidebar-2' ) && is_active_sidebar( 'sidebar-3' ) )
-			$classes[] = 'two-sidebars';
-	}
-
-	if ( empty( $background_color ) )
-		$classes[] = 'custom-background-empty';
-	elseif ( in_array( $background_color, array( 'fff', 'ffffff' ) ) )
-		$classes[] = 'custom-background-white';
-
-	// Enable custom font class only if the font CSS is queued to load.
-	if ( wp_style_is( 'twentytwelve-fonts', 'queue' ) )
-		$classes[] = 'custom-font-enabled';
-
-	if ( ! is_multi_author() )
-		$classes[] = 'single-author';
-
-	return $classes;
-}
-add_filter( 'body_class', 'twentytwelve_body_class' );
-
-/**
  * Adjusts content_width value for full-width and single image attachment
  * templates, and when there are no active widgets in the sidebar.
  *
@@ -354,30 +232,6 @@ function twentytwelve_content_width() {
 	}
 }
 add_action( 'template_redirect', 'twentytwelve_content_width' );
-
-/**
- * Add postMessage support for site title and description for the Theme Customizer.
- *
- * @since Twenty Twelve 1.0
- *
- * @param WP_Customize_Manager $wp_customize Theme Customizer object.
- * @return void
- */
-function twentytwelve_customize_register( $wp_customize ) {
-	$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
-	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
-}
-add_action( 'customize_register', 'twentytwelve_customize_register' );
-
-/**
- * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
- *
- * @since Twenty Twelve 1.0
- */
-function twentytwelve_customize_preview_js() {
-	wp_enqueue_script( 'twentytwelve-customizer', get_template_directory_uri() . '/js/theme-customizer.js', array( 'customize-preview' ), '20120827', true );
-}
-add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
 
 // *************************************************************************
 // Login Page Customisations
@@ -491,9 +345,6 @@ function pears_save_post( $post_id ) {
 	$css_data = $_POST['css'];
 	update_post_meta($post_id, 'css', $css_data);
 }
-
-// Disable visual editor by default
-add_filter ( 'user_can_richedit' , create_function ( '$a' , 'return false;' ) , 50 );
 
 // Default Image Instert Image to Link: None
 update_option('image_default_link_type','none');

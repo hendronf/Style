@@ -12,50 +12,12 @@ Text Domain: stile
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
-/* =Notes
---------------------------------------------------------------
-This stylesheet uses rem values with a pixel fallback. The rem
-values (and line heights) are calculated using two variables:
-
-$rembase:     14;
-$line-height: 24;
-
----------- Examples
-
-* Use a pixel value with a rem fallback for font-size, padding, margins, etc.
-	padding: 5px 0;
-	padding: 0.357142857rem 0; (5 / $rembase)
-
-* Set a font-size and then set a line-height based on the font-size
-	font-size: 16px
-	font-size: 1.142857143rem; (16 / $rembase)
-	line-height: 1.5; ($line-height / 16)
-
----------- Vertical spacing
-
-Vertical spacing between most elements should use 24px or 48px
-to maintain vertical rhythm:
-
-.my-new-div {
-	margin: 24px 0;
-	margin: 1.714285714rem 0; ( 24 / $rembase )
-}
-
----------- Further reading
-
-http://snook.ca/archives/html_and_css/font-size-with-rem
-http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/
-
-*/
 /*Generic Colors*/
 /* Light Gray, used for background, hr's and other elements. */
 /* used for muted text on a lightgray background. Footer links */
 /* Default text color used in the wire, close to black but not quite */
 /* Default text color used throughout the site. */
 /* This is the default link blue color. It is also used as the text color on activity labels */
-/*Brand Colors*/
-/*Seondary Brand Colors*/
-/*Supporting Colors*/
 /*Radius*/
 .radius2 {
   -webkit-border-radius: 1px;
@@ -73,7 +35,7 @@ http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/
   border-radius: 3px;
 }
 /* =Reset
--------------------------------------------------------------- */
+	-------------------------------------------------------------- */
 html,
 body,
 div,
@@ -161,109 +123,12 @@ video {
   font-size: 100%;
   vertical-align: baseline;
 }
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-th {
-  font-weight: bold;
-  text-align: left;
-}
-caption,
-td {
-  font-weight: normal;
-  text-align: left;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  clear: both;
-}
-html {
-  overflow-y: scroll;
-  font-size: 100%;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-}
-a:focus {
-  outline: thin dotted;
-}
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-nav,
-section {
-  display: block;
-}
-audio,
-canvas,
-video {
-  display: inline-block;
-}
-audio:not([controls]) {
-  display: none;
-}
-del {
-  color: #333;
-}
-ins {
-  background: #fff9c0;
-  text-decoration: none;
-}
-hr {
-  background-color: #e8e8e8;
-  border: 0;
-  height: 1px;
-  margin-bottom: 1.714285714rem;
-}
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-sup {
-  top: -0.5em;
-}
-sub {
-  bottom: -0.25em;
-}
-small {
-  font-size: smaller;
-}
 img {
-  border: 0;
-  -ms-interpolation-mode: bicubic;
-  display: block;
-          height: auto;
-          max-width: 100%;
+  vertical-align: bottom;
+}
+body {
+  line-height: 1.5em;
+  color: #333333;
 }
 /* Clearing floats */
 .clear:after,
@@ -283,147 +148,6 @@ img {
 /**
  * The following code is code that Fearghal has vomitted up. Please excuse it and please refactor it! ;)
  */
-/* States */
-.is-hidden, #wp-admin-bar-new-change, #wp-admin-bar-new-documentation {
-  display: none !important;
-}
-
-
-
-/* layout */
-body {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
-  font-weight: 300;
-}
-
-.site-search {
-  height: 3rem;
-  float: left;
-}
-.site-description {
-  width: 18rem;
-  margin-left: 1.5rem;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
-  font-size: 1.25rem;
-  color: #39465A;
-  font-weight: lighter;
-}
-.site-description a {
-  color: #39465A;
-  font-weight: normal;
-  font-size: 1.5rem;
-}
-#colophon {
-  position: fixed;
-  bottom: 0;
-  padding: 0.5rem 0;
-  width: 18rem;
-  text-align: center;
-  background-color: #e8e8e8;
-  border-right: 1px solid #D1D1D1;
-}
-#content {
-  padding: 2.5rem 2rem 2.5rem 20rem;
-}
-#content.homepage {
-  padding: 0;
-  margin-left: 0rem;
-  width: 30rem;
-  height: 30rem;
-}
-.header-logo {
-  padding: 3rem 1rem 1rem 1rem;
-}
-.site-header {
-  background-color: #39465A;
-  min-height: 3rem;
-  width: 100%;
-  z-index: 1;
-  top: 0;
-}
-.main-navigation {
-  width: 18rem;
-  background-color: #e8e8e8;
-  border-right: 1px solid #D1D1D1;
-  bottom: 0;
-  top: 0;
-  float: left;
-  position: fixed;
-  overflow: auto;
-}
-.main-menu-nav-container {
-  margin-top: 3rem!important;
-  position: relative;
-}
-.nav-menu {
-  z-index: -1;
-}
-.menu-item-object-page, .menu-item-object-custom {
-  margin-bottom: 3px;
-  padding-top: 0.45rem;
-  padding-bottom: 0.45rem;
-  padding-left: 1.6rem;
-}
-.nav-menu > .menu-parent-item a {
-  margin-left: 6px;
-}
-.current-menu-parent {
-    background-color:#d8d8d8;
-}
-.nav-menu > .menu-parent-item:before {
-  content: '▶';
-  font-size: 0.6rem;
-  vertical-align: middle;
-}
-.nav-menu > .menu-parent-item.submenu-open {
-  margin-left: -2px;
-}
-
-.nav-menu > .menu-parent-item.submenu-open:before {
-  content: '▼';
-  font-size: 0.7rem;
-  vertical-align: middle;
-}
-.nav-sub-menu {
-  line-height: 1.5rem;
-  padding-top: 0.5rem;
-}
-.nav-sub-menu li {
-  padding: 0rem 0rem 0rem 1.6rem;
-}
-.menu-main-container {
-  margin-top: 5rem;
-  margin-left: 1rem;
-  width: 100%;
-}
-.menu-main-nav-container {
-  margin-top: 4rem;
-}
-.sub-menu {
-  /*	display: none;*/
-
-  padding: 0rem 0 0 1rem!important;
-}
-.menu-item:hover > .sub-menu {
-  display: block;
-  max-width: 14rem;
-}
-/*Searchform Styles*/
-#s {
-  width: 14rem;
-}
-#searchsubmit {
-  display: none;
-}
-.site-search {
-  margin: 0 1.5rem 1.5rem 1.5rem;
-}
-/*General Styles*/
 code {
   overflow: auto;
   width: 100%;
@@ -467,13 +191,138 @@ p {
   margin-top: 1.2rem;
   margin-bottom: 1.2rem;
 }
+.is-hidden {
+  display: none !important;
+}
+body {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
+  font-weight: 300;
+}
+.site-search {
+  height: 3rem;
+  float: left;
+}
+.site-description {
+  width: 18rem;
+  margin-left: 1.5rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  font-size: 1.25rem;
+  color: #39465A;
+  font-weight: lighter;
+}
+.site-description a {
+  color: #39465A;
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+#colophon {
+  position: fixed;
+  bottom: 0;
+  padding: 0.5rem 0;
+  width: 18rem;
+  text-align: center;
+  background-color: #e8e8e8;
+  border-right: 1px solid #D1D1D1;
+}
+#content {
+  padding: 2.5rem 2rem 2.5rem 20rem;
+}
+.header-logo {
+  width: 15rem;
+  padding: 3rem 1.5rem 1.5rem 1.5rem;
+}
+.site-header {
+  background-color: #39465A;
+  min-height: 3rem;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+}
+.main-navigation {
+  width: 18rem;
+  background-color: #e8e8e8;
+  border-right: 1px solid #D1D1D1;
+  bottom: 0;
+  top: 0;
+  float: left;
+  position: fixed;
+  overflow: auto;
+}
+.main-menu-nav-container {
+  margin-top: 3rem!important;
+  position: relative;
+}
+.nav-menu {
+  z-index: -1;
+  list-style-type: none;
+}
+.nav-menu > li {
+  padding-left: 1.6em;
+}
+.nav-menu .menu-parent-item {
+  margin-bottom: 3px;
+}
+.nav-menu > .menu-parent-item a {
+  margin-left: 6px;
+}
+.nav-menu > .menu-parent-item:before {
+  content: '▶';
+  font-size: 0.5rem;
+  vertical-align: middle;
+}
+.current-page-parent {
+  background-color: #cfcfcf;
+}
+.nav-menu > .menu-parent-item.submenu-open {
+  margin-left: -2px;
+}
+.nav-menu > .menu-parent-item.submenu-open:before {
+  content: '▼';
+  font-size: 0.6rem;
+}
+.nav-sub-menu {
+  padding: 0.25rem 0rem 0.25rem 1.5rem;
+  list-style-type: none;
+}
+.menu-main-container {
+  margin-top: 5rem;
+  margin-left: 1rem;
+  width: 100%;
+}
+.menu-main-nav-container {
+  margin-top: 4rem;
+}
+.sub-menu {
+  padding: 0rem 0 0 1rem!important;
+}
+.menu-item:hover > .sub-menu {
+  display: block;
+  max-width: 14rem;
+}
+#s {
+  width: 14rem;
+}
+#searchsubmit {
+  display: none;
+}
+.site-search {
+  margin: 0 1.5rem 1.5rem 1.5rem;
+}
+.entry-title a {
+  color: #000033;
+}
 .entry-meta,
 .site-info {
   font-size: 0.75rem;
-  color: #717171;
+  color: #828282;
 }
 .site-info a {
-  color: #717171;
+  color: #828282;
 }
 a.logouturl {
   color: #cc0000;
@@ -482,54 +331,4 @@ a.logouturl {
 .entry-content ol {
   list-style: inside;
   margin: 0.75rem 0;
-}
-
-.entry-content ul li {
- margin: 0.2em 0;
-}
-.entry-content {
-  margin-bottom: 2rem;
-}
-.archive-title {
-  float: right;
-  color: #e8e8e8;
-}
-.search-result-entries {
-  margin: 1rem 0;
-  border-bottom: 1px solid #e8e8e8;
-  padding: 0 0 1rem 0;
-}
-.wp-caption-text {
-  display: none;  
-}
-/*STYELS FOR THE COLOR BOXES*/
-.color {
-  display: inline-block;
-  margin-right: 0.5rem;
-  margin-bottom: 0.7rem;
-}
-.colorbox {
-  width: 13rem;
-  font-size: 0.8rem;
-  min-height: 1.5rem;
-}
-.colorbox ul {
-  list-style-type: none;
-  padding: 1rem;
-  margin: 0;
-}
-.colorbox ul li {
-  text-align: right;
-}
-.colorbox label {
-  float: left;
-  font-weight: bolder;
-}
-.color-name {
-  width: 100%;
-  float: left;
-  text-align: left;
-  font-size: 1rem;
-  font-weight: lighter;
-  margin-bottom: 1rem;
 }

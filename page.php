@@ -26,7 +26,7 @@ get_header(); ?>
 				</style>
 				<!-- End Custom page style -->
 				
-				<?php get_template_part( 'content', 'page' ); ?>
+				<?php get_template_part( 'content'); ?>
 				
 			<?php endwhile; // end of the loop. ?>
 
