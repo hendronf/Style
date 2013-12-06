@@ -80,6 +80,8 @@ function twentytwelve_header_style() {
 		.site-title a,
 		.site-description {
 			color: #<?php echo $text_color; ?> !important;
+			display: block;
+			font-weight: bold;
 		}
 	<?php endif; ?>
 	</style>

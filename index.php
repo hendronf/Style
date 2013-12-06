@@ -23,7 +23,20 @@ get_header(); ?>
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', get_post_format() ); ?>
+					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+						<header class="entry-header">
+							<h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+						</header>
+
+						<div class="entry-content">
+							<?php the_excerpt( __( 'Continue reading <span class="meta-nav">&rarr;</span>') ); ?>
+							<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
+						</div><!-- .entry-content -->
+						<footer class="entry-meta">
+							
+						</footer><!-- .entry-meta -->
+					</article><!-- #post -->
+					<hr>
 			<?php endwhile; ?>
 
 			<?php twentytwelve_content_nav( 'nav-below' ); ?>

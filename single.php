@@ -15,8 +15,8 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<h6 class="archive-title"><?php printf( __( 'Section: %s', 'twentytwelve' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?></h6>
-				<?php get_template_part( 'content', get_post_format() ); ?>
+				
+				<?php get_template_part( 'content') ?>
 
 				
 
