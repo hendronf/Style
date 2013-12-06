@@ -38,10 +38,34 @@ function style_setup() {
 	 */
 
 	// This theme styles the visual editor with editor-style.css to match the theme style.
-	add_editor_style();
+	add_editor_style('inc/editor-style.css');
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menu( 'primary', __( 'Primary Menu', 'twentytwelve' ) );
+
+	/*
+	 * This theme supports custom background color and image, and here
+	 * we also set up the default background color.
+	 */
+
+	// WORDPRESS 3.4 THEME OPTIONS
+	add_action( 'customize_register', 'hg_customize_register' );
+	function hg_customize_register($wp_customize)
+	{
+	  $colors = array();
+	  $colors[] = array( 'slug'=>'nav_bg_color', 'default' => '#e8e8e8', 'label' => __( 'Navigation Background Color', 'style' ) );
+	  $colors[] = array( 'slug'=>'nav_link_text', 'default' => '#2469A0', 'label' => __( 'Nav Link Text', 'style' ) );
+	  $colors[] = array( 'slug'=>'nav_link_hover', 'default' => '#cfcfcf', 'label' => __( 'Nav Link Hover', 'style' ) );
+
+	  foreach($colors as $color)
+	  {
+	    // SETTINGS
+	    $wp_customize->add_setting( $color['slug'], array( 'default' => $color['default'], 'type' => 'option', 'capability' => 'edit_theme_options' ));
+
+	    // CONTROLS
+	    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $color['slug'], array( 'label' => $color['label'], 'section' => 'colors', 'settings' => $color['slug'] )));
+	  }
+	}
 
 }
 add_action( 'after_setup_theme', 'style_setup' );
@@ -89,17 +113,6 @@ function twentytwelve_scripts_styles() {
 	$wp_styles->add_data( 'twentytwelve-ie', 'conditional', 'lt IE 9' );
 }
 add_action( 'wp_enqueue_scripts', 'twentytwelve_scripts_styles' );
-
-/**
- * Creates a nicely formatted and more specific title element text
- * for output in head of document, based on current view.
- *
- * @since Twenty Twelve 1.0
- *
- * @param string $title Default title text for current view.
- * @param string $sep Optional separator.
- * @return string Filtered title.
- */
 
 /**
  * Makes our wp_nav_menu() fallback -- wp_page_menu() -- show a home link.

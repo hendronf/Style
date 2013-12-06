@@ -29,9 +29,7 @@ if ($user_ID == '') {
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
-<title><?php wp_title( '|', true, 'right' ); ?></title>
-<link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<title><?php bloginfo( 'name' ); ?><?php wp_title(' | '); ?></title>
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 <?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
 <!--[if lt IE 9]>
@@ -40,6 +38,20 @@ if ($user_ID == '') {
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <?php wp_head(); ?>
+
+<!-- Call the custom colors, if there are any -->
+<?php 
+$nav_bg_color = get_option('nav_bg_color');
+$nav_link_text = get_option('nav_link_text'); 
+$nav_link_hover = get_option('nav_link_hover');  
+?>
+<style> 
+.main-navigation, #colophon { background-color:<?php echo $nav_bg_color; ?>; }
+.current-page-parent { background-color: <?php echo $nav_link_hover; ?>; }
+.menu-item a, .menu-parent-item:before, .site-info, .site-info a { color:<?php echo $nav_link_text; ?>; } 
+</style>
+<!-- End Custom Color Call -->
+
 </head>
 
 <body <?php body_class(); ?>>

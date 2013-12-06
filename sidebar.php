@@ -1,19 +1,14 @@
-<nav id="site-navigation" class="main-navigation" role="navigation">
-	<header id="masthead" class="" role="banner">
-		<hgroup>
-		
+<div id="site-navigation" class="main-navigation" role="navigation">
+<nav>	
+	<header id="masthead" role="banner">
 		<?php $header_image = get_header_image();
 		if ( ! empty( $header_image ) ) : ?>
 			<div class="header-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a></div>
 		<?php else : ?>
-			<div class="site-description"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> <?php bloginfo( 'description' ); ?></div>
+			<div class="site-description"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></div>
 		<?php endif; ?>
-			
-			<!-- <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'top-menu', 'items_wrap' => '<ul id="header-nav" class="topie">%3$s</ul>', ) ); ?> -->
 			<div class="site-search"><?php get_search_form(); ?></div>
-		</hgroup>
 	</header><!-- #masthead -->
-			<!-- <h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3> -->
             <?php add_filter( 'wp_nav_menu_objects', 'special_nav_classes' ); ?>
             <?php function special_nav_classes($items) {
                     $parents = array();
@@ -32,4 +27,5 @@
                     return $items;
                 } ?>
 			<?php wp_nav_menu( array( 'theme_location' => 'sidebar', 'menu_class' => 'nav-menu', 'walker' => new My_Walker_Nav_Menu(), ) ); ?>
-		</nav><!-- #site-navigation -->
+</nav>
+</div><!-- #site-navigation -->
