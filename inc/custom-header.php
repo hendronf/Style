@@ -83,6 +83,9 @@ function twentytwelve_header_style() {
 			display: block;
 			font-weight: bold;
 		}
+		.style-text-title {
+			color: #<?php echo $text_color; ?> !important;
+		}
 	<?php endif; ?>
 	</style>
 	<?php

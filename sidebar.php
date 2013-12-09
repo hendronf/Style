@@ -5,7 +5,7 @@
 		if ( ! empty( $header_image ) ) : ?>
 			<div class="header-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a></div>
 		<?php else : ?>
-			<div class="site-description"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></div>
+			<div class="site-description"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" class="style-text-title" rel="home"><?php bloginfo( 'name' ); ?></div>
 		<?php endif; ?>
 			<div class="site-search"><?php get_search_form(); ?></div>
 	</header><!-- #masthead -->

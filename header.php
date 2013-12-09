@@ -43,7 +43,7 @@ if ($user_ID == '') {
 <?php 
 $nav_bg_color = get_option('nav_bg_color');
 $nav_link_text = get_option('nav_link_text'); 
-$nav_link_hover = get_option('nav_link_hover');  
+$nav_link_hover = get_option('nav_link_hover'); 
 ?>
 <style> 
 .main-navigation, #colophon { background-color:<?php echo $nav_bg_color; ?>; }

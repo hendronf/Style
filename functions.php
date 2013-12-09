@@ -57,6 +57,7 @@ function style_setup() {
 	  $colors[] = array( 'slug'=>'nav_link_text', 'default' => '#2469A0', 'label' => __( 'Nav Link Text', 'style' ) );
 	  $colors[] = array( 'slug'=>'nav_link_hover', 'default' => '#cfcfcf', 'label' => __( 'Nav Link Hover', 'style' ) );
 
+
 	  foreach($colors as $color)
 	  {
 	    // SETTINGS
@@ -86,7 +87,7 @@ function twentytwelve_scripts_styles() {
     /*
      * Adds JavaScript for handling the navigation menu hide-and-show behavior.
      */
-    wp_enqueue_script( 'twentytwelve-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '1.0', true );
+    wp_enqueue_script( 'twentytwelve-navigation', get_template_directory_uri() . '/js/navigation-ck.js', array(), '1.0', true );
 
 	/*
 	 * Loads our special font CSS file.
@@ -104,7 +105,7 @@ function twentytwelve_scripts_styles() {
 	/*
 	 * Loads our main stylesheet.
 	 */
-	wp_enqueue_style( 'twentytwelve-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'style_styles', get_stylesheet_uri() );
 
 	/*
 	 * Loads the Internet Explorer specific stylesheet.
