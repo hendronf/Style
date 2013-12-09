@@ -48,7 +48,7 @@ function style_setup() {
 	 * we also set up the default background color.
 	 */
 
-	// WORDPRESS 3.4 THEME OPTIONS
+	// Register Custom Color Options in the Customise Interface.
 	add_action( 'customize_register', 'hg_customize_register' );
 	function hg_customize_register($wp_customize)
 	{
