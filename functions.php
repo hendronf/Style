@@ -78,8 +78,6 @@ require( get_template_directory() . '/inc/custom-header.php' );
 
 /**
  * Enqueues scripts and styles for front-end.
- *
- * @since Twenty Twelve 1.0
  */
 function twentytwelve_scripts_styles() {
 	global $wp_styles;
@@ -90,22 +88,10 @@ function twentytwelve_scripts_styles() {
     wp_enqueue_script( 'twentytwelve-navigation', get_template_directory_uri() . '/js/navigation-ck.js', array(), '1.0', true );
 
 	/*
-	 * Loads our special font CSS file.
-	 *
-	 * The use of Open Sans by default is localized. For languages that use
-	 * characters not supported by the font, the font can be disabled.
-	 *
-	 * To disable in a child theme, use wp_dequeue_style()
-	 * function mytheme_dequeue_fonts() {
-	 *     wp_dequeue_style( 'twentytwelve-fonts' );
-	 * }
-	 * add_action( 'wp_enqueue_scripts', 'mytheme_dequeue_fonts', 11 );
+	 * Loads our stylesheets.
 	 */
-
-	/*
-	 * Loads our main stylesheet.
-	 */
-	wp_enqueue_style( 'style_styles', get_stylesheet_uri() );
+	wp_enqueue_style( 'style_styles', get_stylesheet_uri() ); // only for the theme name
+	wp_enqueue_style( 'style-styles', get_template_directory_uri() . '/css/style-styles.css');
 
 	/*
 	 * Loads the Internet Explorer specific stylesheet.
