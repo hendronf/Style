@@ -221,8 +221,8 @@ function my_login_logo() { ?>
     <style type="text/css">
         body.login div#login h1 a {
             background-image: url('<?php header_image(); ?>');
-            padding-bottom: 30px;
             background-size: inherit;
+            width: 320px;
         }
         .login_form_message {
         	padding-bottom: 1rem;
