@@ -47,15 +47,6 @@ http://snook.ca/archives/html_and_css/font-size-with-rem
 http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/
 
 */
-/*Generic Colors*/
-/* Light Gray, used for background, hr's and other elements. */
-/* used for muted text on a lightgray background. Footer links */
-/* Default text color used in the wire, close to black but not quite */
-/* Default text color used throughout the site. */
-/* This is the default link blue color. It is also used as the text color on activity labels */
-/*Brand Colors*/
-/*Seondary Brand Colors*/
-/*Supporting Colors*/
 /*Radius*/
 .radius2 {
   -webkit-border-radius: 1px;
@@ -281,11 +272,9 @@ img {
  * The following code is code that Fearghal has vomitted up. Please excuse it and please refactor it! ;)
  */
 /* States */
-.is-hidden, #wp-admin-bar-new-change, #wp-admin-bar-new-documentation {
+.is-hidden {
   display: none !important;
 }
-
-
 
 /* layout */
 body {

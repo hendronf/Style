@@ -1,0 +1,22 @@
+/*Adminbar Icons*/
+#wpadminbar #wp-admin-bar-new_style_page_link > .ab-item::before { 
+	content: '\f132'; 
+	top: 3px; 
+}
+
+#wpadminbar #wp-admin-bar-documentation_link > .ab-item::before,
+.icon16.icon-post::before, 
+#adminmenu #menu-posts-documentation div.wp-menu-image::before { 
+	content: '\f330';
+	top: 2px; 
+}
+#wpadminbar #wp-admin-bar-changelog_link > .ab-item::before, 
+.icon16.icon-post::before, 
+#adminmenu #menu-posts-change div.wp-menu-image::before {
+	content: '\f321';
+	top: 2px; 
+}
+
+ {
+	content: '\f321';
+}

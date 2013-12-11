@@ -146,6 +146,19 @@ function twentytwelve_scripts_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'twentytwelve_scripts_styles' );
 
+
+// AdminBar Styles (available in the backend and frontend)
+
+function custom_admin_css() {
+	/*
+	 * Loads custom admin css
+	 */
+	wp_register_style( 'custom-admin-css', get_template_directory_uri() . '/css/custom-admin-styles.css', false, '1.0.0' );
+	wp_enqueue_style( 'custom-admin-css' );
+}
+add_action('wp_enqueue_scripts', 'custom_admin_css');
+add_action('admin_enqueue_scripts', 'custom_admin_css');
+
 /**
  * Creates a nicely formatted and more specific title element text
  * for output in head of document, based on current view.
@@ -583,6 +596,8 @@ function my_rewrite_flush() {
 add_action( 'init', 'codex_custom_init' );
 
 
+
+
 // Custom menu order for wordpress backend sidebar nav. 
 function custom_menu_order($menu_ord) {
 	if (!$menu_ord) return true;
@@ -592,8 +607,8 @@ function custom_menu_order($menu_ord) {
 		'separator1', // First separator
 		'edit.php?post_type=page', // Pages
 		'upload.php', // Media
-		'edit.php?post_type=change', //documentation
 		'edit.php?post_type=documentation', //documentation
+		'edit.php?post_type=change', //changelog
 		'separator2', // Second separator
 		'themes.php', // Appearance
 		'plugins.php', // Plugins
