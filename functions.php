@@ -22,6 +22,10 @@
  * @since Twenty Twelve 1.0
  */
 
+// Require Theme Options
+require_once ( get_template_directory() . '/theme-options.php' );
+
+
 /**
  * Sets up the content width value based on the theme's design and stylesheet.
  */
@@ -113,18 +117,6 @@ function custom_admin_css() {
 }
 add_action('wp_enqueue_scripts', 'custom_admin_css');
 add_action('admin_enqueue_scripts', 'custom_admin_css');
-
-/**
- * Makes our wp_nav_menu() fallback -- wp_page_menu() -- show a home link.
- *
- * @since Twenty Twelve 1.0
- */
-function twentytwelve_page_menu_args( $args ) {
-	if ( ! isset( $args['show_home'] ) )
-		$args['show_home'] = true;
-	return $args;
-}
-add_filter( 'wp_page_menu_args', 'twentytwelve_page_menu_args' );
 
 if ( ! function_exists( 'twentytwelve_content_nav' ) ) :
 /**
