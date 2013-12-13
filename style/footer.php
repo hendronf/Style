@@ -13,7 +13,7 @@
 	</div><!-- #main .wrapper -->
 	<footer id="colophon" role="contentinfo">
 		<div class="site-info">
-			<a href="https://github.com/hendronf/Style" target="_blank">Style</a> by <a href="http://fearghal.co.uk/" target="_blank">Fearghal</a> - <a href="<?php echo wp_logout_url(); ?>" title="Logout">Logout</a>
+			<a href="https://github.com/hendronf/Style" target="_blank">Style</a> by <a href="http://fearghal.co.uk/" target="_blank">Fearghal</a>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
