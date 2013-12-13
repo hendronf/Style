@@ -255,7 +255,7 @@ class My_Walker_Nav_Menu extends Walker_Nav_Menu {
     }
 }
 
-// Custom Meta Boxes for CSS in pages.
+// Custom Meta Boxes for CSS in pages thanks to http://pea.rs
 add_action( 'add_meta_boxes', 'pears_add_meta_box' );
 add_action( 'save_post', 'pears_save_post' );
 
@@ -320,108 +320,12 @@ function style_remove_new_menu() {
 }
 add_action( 'wp_before_admin_bar_render', 'style_remove_new_menu' );
 
-
-// Add Custom Post Types
-function codex_custom_init() {
-  $labels_change = array(
-    'name' => 'Change Log',
-    'singular_name' => 'Change',
-    'add_new' => 'Add Change',
-    'add_new_item' => 'Add New Change',
-    'edit_item' => 'Edit',
-    'new_item' => 'New Change',
-    'all_items' => 'All Changes',
-    'view_item' => 'View Change',
-    'search_items' => 'Search Changes',
-    'not_found' =>  'No changelog found',
-    'not_found_in_trash' => 'No changes found in Trash', 
-    'parent_item_colon' => '',
-    'menu_name' => 'Change Log'
-  );
-
-  $args_change = array(
-    'labels' => $labels_change,
-    'public' => true,
-    'publicly_queryable' => true,
-    'show_ui' => true, 
-    'show_in_menu' => true, 
-    'query_var' => true,
-    'rewrite' => array( 'slug' => 'change' ),
-    'capability_type' => 'post',
-    'has_archive' => true, 
-    'hierarchical' => false,
-    'menu_position' => 20,
-    'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
-  ); 
-
-  register_post_type( 'change', $args_change );
-}
-{
-  $labels_documentation = array(
-    'name' => 'Documentation',
-    'singular_name' => 'Documentation',
-    'add_new' => 'Add Documentation',
-    'add_new_item' => 'Add New Documentation',
-    'edit_item' => 'Edit',
-    'new_item' => 'New Documentation',
-    'all_items' => 'All Documentation',
-    'view_item' => 'View Documentation',
-    'search_items' => 'Search Documentation',
-    'not_found' =>  'No Documentation found',
-    'not_found_in_trash' => 'No Documentation found in Trash', 
-    'parent_item_colon' => '',
-    'menu_name' => 'Documentation'
-  );
-
-  $args_documentation = array(
-    'labels' => $labels_documentation,
-    'public' => true,
-    'publicly_queryable' => true,
-    'show_ui' => true, 
-    'show_in_menu' => true, 
-    'query_var' => true,
-    'rewrite' => array( 'slug' => 'documentation' ),
-    'capability_type' => 'post',
-    'has_archive' => true, 
-    'hierarchical' => false,
-    'menu_position' => 30,
-    'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
-  ); 
-
-  register_post_type( 'documentation', $args_documentation );
-}
+// flush rewrite rules and start again.
 
 function my_rewrite_flush() {
     flush_rewrite_rules();
 }
 add_action( 'init', 'codex_custom_init' );
-
-
-
-
-// Custom menu order for wordpress backend sidebar nav. 
-function custom_menu_order($menu_ord) {
-	if (!$menu_ord) return true;
-	
-	return array(
-		'index.php', // Dashboard
-		'separator1', // First separator
-		'edit.php?post_type=page', // Pages
-		'upload.php', // Media
-		'edit.php?post_type=documentation', //documentation
-		'edit.php?post_type=change', //changelog
-		'separator2', // Second separator
-		'themes.php', // Appearance
-		'plugins.php', // Plugins
-		'users.php', // Users
-		'tools.php', // Tools
-		'options-general.php', // Settings
-		'separator-last', // Last separator
-	);
-}
-add_filter('custom_menu_order', 'custom_menu_order'); // Activate custom_menu_order
-add_filter('menu_order', 'custom_menu_order');
-
 
 /*-----------------------------------------------------------------------------------*/
 /* Remove Unwanted Admin Menu Items */
@@ -447,63 +351,44 @@ function add_new_menu_items($admin_bar){
 			'title' => __('Add a new page to the style guide'),
 		),
 	));
-	$admin_bar->add_menu( array(
-	'id'    => 'new_style_page_sublink', // add the New menu, New Page Link
-		'parent' => 'new_style_page_link',
-		'title' => 'New Page',
-		'href'  => '/wp-admin/post-new.php?post_type=page',
-		'meta'  => array(
-			'title' => __('Add a new page to the style guide'),
-			'class' => 'new_style_page_sublink'
-		),
-	));
-	$admin_bar->add_menu( array(
-		'id'    => 'add_new_media', // add the New menu, New Media Link
-		'parent' => 'new_style_page_link',
-		'title' => 'Add Download',
-		'href'  => '/wp-admin/media-new.php',
-		'meta'  => array(
-			'title' => __('Add a new download, you will need to add this to a page after upload'),
-			'class' => 'add_download_link'
-		),
-	));
-	$admin_bar->add_menu( array(
-		'id'    => 'add_new_user', // add the New menu, New User Link
-		'parent' => 'new_style_page_link',
-		'title' => 'Add User',
-		'href'  => '/wp-admin/user-new.php',
-		'meta'  => array(
-			'title' => __('Give a new user access to the style guide.'),
-			'class' => 'add_user_link'
-		),
-	));
+			$admin_bar->add_menu( array(
+			'id'    => 'new_style_page_sublink', // add the New menu, New Page Link
+				'parent' => 'new_style_page_link',
+				'title' => 'New Page',
+				'href'  => '/wp-admin/post-new.php?post_type=page',
+				'meta'  => array(
+					'title' => __('Add a new page to the style guide'),
+					'class' => 'new_style_page_sublink'
+				),
+			));
+			$admin_bar->add_menu( array(
+				'id'    => 'add_new_media', // add the New menu, New Media Link
+				'parent' => 'new_style_page_link',
+				'title' => 'Add Download',
+				'href'  => '/wp-admin/media-new.php',
+				'meta'  => array(
+					'title' => __('Add a new download, you will need to add this to a page after upload'),
+					'class' => 'add_download_link'
+				),
+			));
+			$admin_bar->add_menu( array(
+				'id'    => 'add_new_user', // add the New menu, New User Link
+				'parent' => 'new_style_page_link',
+				'title' => 'Add User',
+				'href'  => '/wp-admin/user-new.php',
+				'meta'  => array(
+					'title' => __('Give a new user access to the style guide.'),
+					'class' => 'add_user_link'
+				),
+			));
 	$admin_bar->
 		add_menu( array(
 		'id'    => 'documentation_link', // add the Documentation menu
 		'title' => 'Documentation',
-		'href'  => '/documentation/',
+		'href'  => 'http://style.nu/docs',
 		'meta'  => array(
-			'title' => __('A how guide for Style. E.g. Add and remove users / add a new page, etc.'),
-		),
-	));
-	$admin_bar->add_menu( array(
-	'id'    => 'view_dpocumentation_link', // add the Documentation menu, View Documenation link
-		'parent' => 'documentation_link',
-		'title' => 'View Documentation',
-		'href'  => '/documentation/',
-		'meta'  => array(
-			'title' => __('Get help in the Documentation'),
-			'class' => 'view_documentation_link'
-		),
-	));
-	$admin_bar->add_menu( array(
-		'id'    => 'add_documentation_link', // add the Documentation menu, Add Documenation link
-		'parent' => 'documentation_link',
-		'title' => 'Add Documentation',
-		'href'  => '/wp-admin/post-new.php?post_type=documentation',
-		'meta'  => array(
-			'title' => __('Add to the Style Documentation'),
-			'class' => 'add_documentation_link'
+			'title' => __('A how guide for Style. E.g. Add and remove users / add a new page edit menus etc.'),
+			'target'=> '_blank',
 		),
 	));
 
@@ -511,32 +396,15 @@ function add_new_menu_items($admin_bar){
 		add_menu( array(
 		'id'    => 'changelog_link', // add the Changelog menu
 		'title' => 'Change Log',
-		'href'  => '/change/',
+		'href'  => 'http://style.nu/changelog/',
 		'meta'  => array(
-			'title' => __('View the changes in Style'),
-		),
-	));
-			$admin_bar->add_menu( array(
-		'id'    => 'view_changelog_link', // add the Changelog menu, View Chagne link
-		'parent' => 'changelog_link',
-		'title' => 'View Change Log',
-		'href'  => '/change/',
-		'meta'  => array(
-			'title' => __('Read the Change Log'),
-			'class' => 'view_changelog_link'
-		),
-	));
-	$admin_bar->add_menu( array(
-		'id'    => 'add_changelog_link', // add the Changelog menu, Add Chagne link
-		'parent' => 'changelog_link',
-		'title' => 'Add Change',
-		'href'  => '/wp-admin/post-new.php?post_type=change',
-		'meta'  => array(
-			'title' => __('Add a change to the Change Log'),
-			'class' => 'add_changelog_link'
+			'title' => __('See the recent changes in Style'),
+			'target'=> '_blank',
 		),
 	));
 } 
+
+
 
 // *******************************************************
 // /END of Add Custon New, Documentation and Changelog menus to the Admin bar.
