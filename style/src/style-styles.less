@@ -45,6 +45,8 @@
 	border-radius: 3px;
 }
 
+@linkblue: #2469A0;
+
 	/* =Reset
 	-------------------------------------------------------------- */
 
@@ -120,8 +122,8 @@ blockquote p {
 	margin:0;
 }
 
-a, a:hover {
-	color: #2469A0;
+a, a:hover, .menu-item:before {
+	color: @linkblue;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -227,11 +229,11 @@ body {
 }
 
 .main-menu-nav-container {
-	margin-top: 3rem!important;
-	 position: relative;
+	position: relative;
 }
 
 .nav-menu {
+	margin: 2rem 0 3rem 0;
 	z-index: -1;
 	list-style-type: none;
 }
