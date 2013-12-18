@@ -22,10 +22,6 @@
  * @since Twenty Twelve 1.0
  */
 
-// Require Theme Options
-require_once ( get_template_directory() . '/theme-options.php' );
-
-
 /**
  * Sets up the content width value based on the theme's design and stylesheet.
  */
@@ -80,6 +76,7 @@ add_action( 'after_setup_theme', 'style_setup' );
  */
 require( get_template_directory() . '/inc/custom-header.php' );
 require( get_template_directory() . '/inc/content-visibility.php' );
+
 
 /**
  * Enqueues scripts and styles for front-end.

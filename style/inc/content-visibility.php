@@ -61,7 +61,7 @@ class bainternet_style {
 	
 	//admin menu
 	public function admin_menu() {
-		add_options_page('Content Visibility', 'Content Visibility', 'manage_options', 'ba_style', array($this,'style_options'));
+		add_options_page('Style Settings', 'Style Settings', 'manage_options', 'ba_style', array($this,'style_options'));
 	}
 	
 	//options page
@@ -83,18 +83,19 @@ class bainternet_style {
 			<?php  //print_r($options); ?>
 
 			<table class="form-table">
-
-			<tr valign="top">
-			<th scope="row"><?php echo __('Global Blocked message:','bauspc'); ?></th>
-			<td><textarea type="text" name="style[b_massage]" ><?php echo $options['b_massage']; ?></textarea><br /> 
-			<?php _e('<small>(Accepts HTML)</small>','bauspc'); ?></td>
-			</tr>
+			<tr valign="top"><th scope="row"><?php echo __('Content Visibility Message:','styletheme'); ?></th>
+					<td>
+						<textarea id="style_theme_options[content-vis-message]" class="large-text" rows="7" type="text" name="style[b_massage]" ><?php echo $options['b_massage']; ?></textarea>
+						<label class="description" for"style_theme_options[content-vis-message]"><?php _e('Accepts HTML - Displayed when content is not accessable to a member.','styletheme'); ?></label>
+					</td>
+				</tr>
 			</table>
 			<p class="submit">
 			<input type="submit" class="button-primary" value="<?php _e('Save Changes','bauspc'); ?>" />
 			</p>
 			</form>
 		</div>
+		
 		<?php
 	}
 	
