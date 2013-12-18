@@ -227,7 +227,8 @@ return '';
 
 add_action('login_form', 'login_form_message');
 function login_form_message() {
-	echo '<p class="login_form_message">Please <a href="mailto:fearghal.hendron@internations.org">contact me</a> if you need login details.</p>';
+$adminemail = get_option('admin_email');
+	echo '<p class="login_form_message">Please <a href="mailto:' . $adminemail . '">contact me</a> if you need login details.</p>';
 }
 
 // Redirect to homepage after login
