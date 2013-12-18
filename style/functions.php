@@ -75,6 +75,7 @@ add_action( 'after_setup_theme', 'style_setup' );
  * Adds support for a custom header image.
  */
 require( get_template_directory() . '/inc/custom-header.php' );
+require( get_template_directory() . '/inc/content-visibility.php' );
 
 /**
  * Enqueues scripts and styles for front-end.
@@ -226,7 +227,8 @@ return '';
 
 add_action('login_form', 'login_form_message');
 function login_form_message() {
-	echo '<p class="login_form_message">Please <a href="mailto:fearghal.hendron@internations.org">contact me</a> if you need login details.</p>';
+$adminemail = get_option('admin_email');
+	echo '<p class="login_form_message">Please <a href="mailto:' . $adminemail . '">contact me</a> if you need login details.</p>';
 }
 
 // Redirect to homepage after login
@@ -278,7 +280,7 @@ function style_meta_box( $post ) {
 
 	echo '<p>This field is for CSS specific to this page. The post body should contain the markup relating to this page.</p>';
 	echo '<label for="css">CSS</label>	';
-  	echo '<p><textarea id="css" name="css" rows="20" cols="90" />' . $css . '</textarea></p>';
+  	echo '<p><textarea style="width:100%;" id="css" name="css" rows="20" class=""/>' . $css . '</textarea></p>';
 }
 
 function pears_save_post( $post_id ) {
