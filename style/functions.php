@@ -72,9 +72,23 @@ function style_setup() {
 add_action( 'after_setup_theme', 'style_setup' );
 
 /**
- * Adds support for a custom header image.
+ * Adds support for a custom header
  */
-require( get_template_directory() . '/inc/custom-header.php' );
+
+$args = array(
+	'width'         => 240,
+	'flex-height'    => true,
+	'height'        => 70,
+	'default-image' =>  get_template_directory_uri() . '/src/style.png',
+	'uploads'       => true,
+	'header-text'	=> false,
+);
+add_theme_support( 'custom-header', $args );
+
+/**
+ * Adds our content visibility plugin.
+ */
+
 require( get_template_directory() . '/inc/content-visibility.php' );
 
 
