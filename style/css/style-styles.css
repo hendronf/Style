@@ -35,7 +35,7 @@
   border-radius: 3px;
 }
 /* =Reset
-	-------------------------------------------------------------- */
+-------------------------------------------------------------- */
 html,
 body,
 div,
@@ -149,9 +149,6 @@ body {
   display: table;
   content: "";
 }
-/**
- * The following code is code that Fearghal has vomitted up. Please excuse it and please refactor it! ;)
- */
 h1,
 h2,
 h3,
@@ -193,6 +190,25 @@ a,
 a:hover,
 .menu-item:before {
   color: #2469a0;
+}
+.entry-title a {
+  color: #000033;
+}
+.entry-meta,
+.site-info {
+  font-size: 0.75rem;
+  color: #828282;
+}
+.site-info a {
+  color: #828282;
+}
+a.logouturl {
+  color: #cc0000;
+}
+.entry-content ul,
+.entry-content ol {
+  list-style: inside;
+  margin: 0.75rem 0;
 }
 .is-hidden {
   display: none !important;

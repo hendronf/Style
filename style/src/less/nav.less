@@ -1,0 +1,81 @@
+// Navigation
+// -----------------------
+.main-navigation {
+  width: 18rem;
+  background-color:@lightgray;
+  border-right: 1px solid #D1D1D1;
+  bottom: 0;
+  top: 0;
+  float: left;
+  position: fixed;
+  overflow: auto;
+}
+
+.main-menu-nav-container {
+  position: relative;
+}
+
+.nav-menu {
+  margin: 2rem 0 3rem 0;
+  z-index: -1;
+  list-style-type: none;
+}
+
+.nav-menu > li {
+  padding-left: 1.6em;
+}
+
+// Styling for the menu item 'open/closed' arrows
+// -------------------------
+.nav-menu .menu-parent-item {
+    margin-bottom: 3px;
+}
+
+.nav-menu > .menu-parent-item a {
+    margin-left: 6px;
+}
+
+.nav-menu > .menu-parent-item:before {
+    content: '▶';
+    font-size: 0.5rem;
+    vertical-align: middle;
+}
+
+.current-page-parent {
+  background-color: @highlightgray;
+}
+
+// Prevents a small horizontal 'jumping' when arrow changes to open state
+// -------------------------
+.nav-menu > .menu-parent-item.submenu-open {
+    margin-left: -2px;
+}
+
+.nav-menu > .menu-parent-item.submenu-open:before {
+    content: '▼';
+    font-size: 0.6rem;
+}
+
+.nav-sub-menu {
+  padding: 0.25rem 0rem 0.25rem 1.5rem;
+  list-style-type: none;
+}
+
+.menu-main-container {
+  margin-top: 5rem;
+  margin-left: 1rem;
+  width: 100%;
+}
+
+.menu-main-nav-container {
+  margin-top: 2rem;
+}
+
+.sub-menu {
+  padding: 0rem 0 0 1rem!important;
+}
+
+.menu-item:hover > .sub-menu {
+  display: block;
+  max-width: 14rem;
+}

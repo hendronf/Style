@@ -1,0 +1,22 @@
+/*Generic Colors*/
+/* Light Gray, used for background, hr's and other elements. */
+/* used for muted text on a lightgray background. Footer links */
+/* Default text color used in the wire, close to black but not quite */
+/* Default text color used throughout the site. */
+/* This is the default link blue color. It is also used as the text color on activity labels */
+/*Radius*/
+.radius1 {
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+}
+.radius2 {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.radius3 {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
