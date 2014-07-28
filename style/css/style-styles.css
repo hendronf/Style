@@ -334,22 +334,3 @@ body {
   margin: 0 0 0 1.5rem;
   float: none;
 }
-.entry-title a {
-  color: #000033;
-}
-.entry-meta,
-.site-info {
-  font-size: 0.75rem;
-  color: #828282;
-}
-.site-info a {
-  color: #828282;
-}
-a.logouturl {
-  color: #cc0000;
-}
-.entry-content ul,
-.entry-content ol {
-  list-style: inside;
-  margin: 0.75rem 0;
-}
