@@ -80,7 +80,7 @@ $args = array(
 	'width'         => 240,
 	'flex-height'    => true,
 	'height'        => 70,
-	'default-image' =>  get_template_directory_uri() . '/src/style.png',
+	'default-image' =>  get_template_directory_uri() . '/src/img/style.png',
 	'uploads'       => true,
 	'header-text'	=> false,
 );
@@ -279,7 +279,7 @@ add_action( 'save_post', 'pears_save_post' );
 
 function pears_add_meta_box() {
 
-    add_meta_box( 
+    add_meta_box(
         'style',
         'Style',
         'style_meta_box',
@@ -302,14 +302,14 @@ function style_meta_box( $post ) {
 function pears_save_post( $post_id ) {
 
 	// Ignore if doing an autosave
-  	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) 
+  	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
   	    return;
-			
+
 	// verify data came from style meta box
   	if ( !wp_verify_nonce( $_POST['style_noncename'], plugin_basename( __FILE__ ) ) )
-		return;	
-				
-	
+		return;
+
+
   	// Check user permissions
   	if ( 'post' == $_POST['post_type'] ) {
     	if ( !current_user_can( 'edit_page', $post_id ) )
@@ -319,10 +319,10 @@ function pears_save_post( $post_id ) {
     	if ( !current_user_can( 'edit_post', $post_id ) )
 	        return;
   	}
-  	
+
   	$html_data = $_POST['html'];
 	update_post_meta($post_id, 'html', $html_data);
-	
+
 	$css_data = $_POST['css'];
 	update_post_meta($post_id, 'css', $css_data);
 }
@@ -352,7 +352,7 @@ add_action( 'admin_menu', 'style_remove_menu_pages' );
 
 function style_remove_menu_pages() {
 		remove_menu_page('edit.php');
-		remove_menu_page('edit-comments.php');	
+		remove_menu_page('edit-comments.php');
 }
 // *******************************************************
 // Add Custon New, Documentation and Changelog menus to the Admin bar.
@@ -420,7 +420,7 @@ function add_new_menu_items($admin_bar){
 			'target'=> '_blank',
 		),
 	));
-} 
+}
 
 
 
