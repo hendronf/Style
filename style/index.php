@@ -17,13 +17,13 @@
 get_header(); ?>
 
 	<div id="primary" class="site-content">
-	<?php get_sidebar(); ?>
-		<div id="content" role="main">
+		<?php get_sidebar(); ?>
+
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<article id="post-<?php the_ID(); ?>" <?php post_class('page-content'); ?>>
 						<header class="entry-header">
 							<h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 						</header>
@@ -33,10 +33,9 @@ get_header(); ?>
 							<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
 						</div><!-- .entry-content -->
 						<footer class="entry-meta">
-							
+
 						</footer><!-- .entry-meta -->
 					</article><!-- #post -->
-					<hr>
 			<?php endwhile; ?>
 
 			<?php twentytwelve_content_nav( 'nav-below' ); ?>
@@ -73,8 +72,6 @@ get_header(); ?>
 
 		<?php endif; // end have_posts() check ?>
 
-		</div><!-- #content -->
-		
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>

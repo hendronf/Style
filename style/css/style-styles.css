@@ -34,144 +34,6 @@
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
-/* =Reset
--------------------------------------------------------------- */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-img {
-  border: 0;
-  -ms-interpolation-mode: bicubic;
-  display: block;
-  height: auto;
-  max-width: 100%;
-}
-body {
-  line-height: 1.5em;
-  color: #333333;
-}
-/* Clearing floats */
-.clear:after,
-.wrapper:after,
-.format-status .entry-header:after {
-  clear: both;
-}
-.clear:before,
-.clear:after,
-.wrapper:before,
-.wrapper:after,
-.format-status .entry-header:before,
-.format-status .entry-header:after {
-  display: table;
-  content: "";
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-h1 {
-  font-size: 1.75rem;
-}
-h2 {
-  font-size: 1.55rem;
-}
-h3 {
-  font-size: 1.35rem;
-}
-p {
-  line-height: 1.2rem;
-  margin-top: 1.2rem;
-  margin-bottom: 1.2rem;
-}
 code {
   overflow: auto;
   width: 100%;
@@ -196,7 +58,7 @@ a:hover,
 }
 .entry-meta,
 .site-info {
-  font-size: 0.75rem;
+  font-size: 1.2rem;
   color: #828282;
 }
 .site-info a {
@@ -213,76 +75,47 @@ a.logouturl {
 .is-hidden {
   display: none !important;
 }
-body {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
-  font-weight: 300;
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
-.site-search {
-  height: 3rem;
-  float: left;
+html,
+body,
+.site,
+.wrapper,
+.site-content {
+  height: 100%;
+  margin-top: 0!important;
 }
-.site-description {
-  width: 15rem;
-  margin-left: 1.5rem;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
-  font-size: 1.25rem;
-  font-weight: lighter;
-}
-.site-description a {
-  font-weight: normal;
-  font-size: 1.5rem;
+.page-content {
+  width: 70%;
+  display: inline-block;
+  padding-left: 2em;
 }
 #colophon {
-  position: fixed;
-  bottom: 0;
-  padding: 0.5rem 0;
-  width: 18rem;
-  text-align: center;
-  background-color: #e8e8e8;
-  border-right: 1px solid #D1D1D1;
+  box-sizing: border-box;
+  margin: 3rem auto 0 auto;
+  bottom: 1rem;
 }
-#content {
-  padding: 2.5rem 2rem 2.5rem 20rem;
-}
-.header-logo {
-  width: 18rem;
-  padding: 46px 1.5rem 1.5rem 1.5rem;
-}
-.site-header {
-  background-color: #39465A;
-  min-height: 3rem;
-  width: 100%;
-  z-index: 1;
-  top: 0;
-}
-#masthead img {
-  margin: 3em auto 1em auto;
-}
-.main-navigation {
-  width: 18rem;
-  background-color: #e8e8e8;
-  border-right: 1px solid #D1D1D1;
-  bottom: 0;
-  top: 0;
+section.main-navigation {
+  height: 100%;
+  width: 30%;
   float: left;
-  position: fixed;
-  overflow: auto;
-}
-.main-menu-nav-container {
-  position: relative;
+  top: 0;
+  bottom: 0;
+  text-align: center;
 }
 .nav-menu {
-  margin: 2rem 0 3rem 0;
-  z-index: -1;
-  list-style-type: none;
+  text-align: left;
+  -webkit-padding-start: 0px;
+  padding-left: 2rem;
+  margin-top: 2rem;
 }
-.nav-menu > li {
-  padding-left: 1.6em;
+ul.nav-menu li {
+  list-style-type: none;
 }
 .nav-menu .menu-parent-item {
   margin-bottom: 3px;
@@ -292,7 +125,7 @@ body {
 }
 .nav-menu > .menu-parent-item:before {
   content: '▶';
-  font-size: 0.5rem;
+  font-size: 0.75rem;
   vertical-align: middle;
 }
 .current-page-parent {
@@ -303,7 +136,7 @@ body {
 }
 .nav-menu > .menu-parent-item.submenu-open:before {
   content: '▼';
-  font-size: 0.6rem;
+  font-size: 0.9rem;
 }
 .nav-sub-menu {
   padding: 0.25rem 0rem 0.25rem 1.5rem;
@@ -322,15 +155,11 @@ body {
 }
 .menu-item:hover > .sub-menu {
   display: block;
-  max-width: 14rem;
-}
-#s {
-  width: 17.2em;
 }
 #searchsubmit {
   display: none;
 }
 .site-search {
-  margin: 0 0 0 1.5rem;
+  margin: 0 1.5em 0 1.5rem;
   float: none;
 }

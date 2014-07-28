@@ -1,28 +1,23 @@
 // Navigation
 // -----------------------
-.main-navigation {
-  width: 18rem;
-  background-color:@lightgray;
-  border-right: 1px solid #D1D1D1;
-  bottom: 0;
-  top: 0;
+section.main-navigation {
+  height: 100%;
+  width: 30%;
   float: left;
-  position: fixed;
-  overflow: auto;
-}
-
-.main-menu-nav-container {
-  position: relative;
+  top: 0;
+  bottom: 0;
+  text-align: center;
 }
 
 .nav-menu {
-  margin: 2rem 0 3rem 0;
-  z-index: -1;
-  list-style-type: none;
+  text-align:left;
+  -webkit-padding-start: 0px;
+  padding-left: 2rem;
+  margin-top: 2rem;
 }
 
-.nav-menu > li {
-  padding-left: 1.6em;
+ul.nav-menu li {
+  list-style-type: none;
 }
 
 // Styling for the menu item 'open/closed' arrows
@@ -37,7 +32,7 @@
 
 .nav-menu > .menu-parent-item:before {
     content: '▶';
-    font-size: 0.5rem;
+    font-size: 0.75rem;
     vertical-align: middle;
 }
 
@@ -53,7 +48,7 @@
 
 .nav-menu > .menu-parent-item.submenu-open:before {
     content: '▼';
-    font-size: 0.6rem;
+    font-size: 0.9rem;
 }
 
 .nav-sub-menu {
@@ -77,5 +72,4 @@
 
 .menu-item:hover > .sub-menu {
   display: block;
-  max-width: 14rem;
 }
