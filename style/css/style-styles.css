@@ -34,15 +34,22 @@
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
+ol {
+  list-style-type: decimal;
+}
 code {
   overflow: auto;
   width: 100%;
   white-space: normal;
 }
+pre {
+  margin: 0 20px 0 10px;
+  border: 1px solid #ccc;
+}
 blockquote {
-  background-color: #e8e8e8;
-  padding: 0.5rem;
-  border-left: 2px solid #39465A;
+  background-color: #f5f5f5;
+  padding: 0.5rem 0.5rem 0.5rem 1em;
+  border-left: 4px solid #39465A;
   margin: 0.5rem 0;
 }
 blockquote p {
@@ -52,6 +59,23 @@ a,
 a:hover,
 .menu-item:before {
   color: #2469a0;
+}
+p img {
+  display: inline;
+}
+th,
+td {
+  padding: 0.1em 0.5em;
+  border-bottom: 1px solid #d1d1d1;
+  border-right: 1px solid #d1d1d1;
+}
+table {
+  border: 1px solid #d1d1d1;
+  background-color: #ffffff;
+  margin-bottom: 1em;
+}
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
 }
 .entry-title a {
   color: #000033;
@@ -64,12 +88,16 @@ a:hover,
 .site-info a {
   color: #828282;
 }
+footer#colophon {
+  position: fixed;
+  bottom: 1rem;
+  width: inherit;
+}
 a.logouturl {
   color: #cc0000;
 }
 .entry-content ul,
 .entry-content ol {
-  list-style: inside;
   margin: 0.75rem 0;
 }
 .is-hidden {
@@ -94,11 +122,7 @@ body,
   width: 70%;
   display: inline-block;
   padding-left: 2em;
-}
-#colophon {
-  box-sizing: border-box;
-  margin: 3rem auto 0 auto;
-  bottom: 1rem;
+  float: right;
 }
 section.main-navigation {
   height: 100%;
@@ -107,6 +131,7 @@ section.main-navigation {
   top: 0;
   bottom: 0;
   text-align: center;
+  position: fixed;
 }
 .nav-menu {
   text-align: left;
