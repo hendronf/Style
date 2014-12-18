@@ -23,11 +23,13 @@ get_header(); ?>
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-					<article id="post-<?php the_ID(); ?>" <?php post_class('page-content'); ?>>
-						<header class="entry-header">
-							<h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-						</header>
 
+				<!-- This is to display the styles entered on the page in the admin interface -->
+				<style id="s" type="text/css">
+				<?php $key="css"; echo get_post_meta($post->ID, $key, true); ?>
+				</style>
+
+					<article id="post-<?php the_ID(); ?>" <?php post_class('page-content'); ?>>
 						<div class="entry-content">
 							<?php the_content(); ?>
 							<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>

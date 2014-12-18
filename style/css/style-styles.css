@@ -166,16 +166,16 @@ section.main-navigation {
 .custom-logo {
   max-width: 100%;
   height: auto;
-  padding-top: 6rem;
+  padding: 6rem 2rem 2rem 2rem;
 }
 .nav-menu {
   text-align: left;
   -webkit-padding-start: 0px;
-  padding-left: 2rem;
   margin-top: 2rem;
 }
 ul.nav-menu li {
   list-style-type: none;
+  padding-left: 2rem;
 }
 .nav-menu .menu-parent-item {
   margin-bottom: 3px;
@@ -188,8 +188,12 @@ ul.nav-menu li {
   font-size: 0.75rem;
   vertical-align: middle;
 }
-.current-page-parent {
-  background-color: #cfcfcf;
+.current-menu-parent,
+.current_page_item a {
+  font-weight: bolder;
+}
+.current-menu-parent ul {
+  font-weight: lighter;
 }
 .nav-menu > .menu-parent-item.submenu-open {
   margin-left: -2px;
@@ -199,7 +203,7 @@ ul.nav-menu li {
   font-size: 0.9rem;
 }
 .nav-sub-menu {
-  padding: 0.25rem 0rem 0.25rem 1.5rem;
+  padding: 0.25rem 0rem 0.25rem 0rem;
   list-style-type: none;
 }
 .menu-main-container {

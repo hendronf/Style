@@ -12,17 +12,17 @@ section.main-navigation {
 .custom-logo {
   max-width: 100%;
   height: auto;
-  padding-top: 6rem;
+  padding: 6rem 2rem 2rem 2rem;
 }
 .nav-menu {
   text-align:left;
   -webkit-padding-start: 0px;
-  padding-left: 2rem;
   margin-top: 2rem;
 }
 
 ul.nav-menu li {
   list-style-type: none;
+  padding-left: 2rem;
 }
 
 // Styling for the menu item 'open/closed' arrows
@@ -41,8 +41,12 @@ ul.nav-menu li {
     vertical-align: middle;
 }
 
-.current-page-parent {
-  background-color: @highlightgray;
+.current-menu-parent, .current_page_item a {
+  font-weight: bolder;
+}
+
+.current-menu-parent ul {
+  font-weight: lighter;
 }
 
 // Prevents a small horizontal 'jumping' when arrow changes to open state
@@ -57,7 +61,7 @@ ul.nav-menu li {
 }
 
 .nav-sub-menu {
-  padding: 0.25rem 0rem 0.25rem 1.5rem;
+  padding: 0.25rem 0rem 0.25rem 0rem;
   list-style-type: none;
 }
 
