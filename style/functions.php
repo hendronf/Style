@@ -77,9 +77,9 @@ add_action( 'after_setup_theme', 'style_setup' );
 
 $args = array(
 	'random-default'         => false,
-	'width'         => 240,
+	'width'         => '240',
 	'flex-height'    => true,
-	'height'        => 70,
+	'height'        => '70px',
 	'default-image' =>  get_template_directory_uri() . '/src/img/style.png',
 	'uploads'       => true,
 	'header-text'	=> false,

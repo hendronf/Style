@@ -110,6 +110,38 @@ a.logouturl {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+@media only screen and (max-width: 320px) {
+  .page-content {
+    width: 70%;
+  }
+  section.main-navigation {
+    width: 30%;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 600px) {
+  .page-content {
+    width: 70%;
+  }
+  section.main-navigation {
+    width: 30%;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .page-content {
+    width: 70%;
+  }
+  section.main-navigation {
+    width: 30%;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .page-content {
+    width: 80%;
+  }
+  section.main-navigation {
+    width: 20%;
+  }
+}
 html,
 body,
 .site,
@@ -119,19 +151,22 @@ body,
   margin-top: 0!important;
 }
 .page-content {
-  width: 70%;
   display: inline-block;
   padding-left: 2em;
   float: right;
 }
 section.main-navigation {
   height: 100%;
-  width: 30%;
   float: left;
   top: 0;
   bottom: 0;
   text-align: center;
   position: fixed;
+}
+.custom-logo {
+  max-width: 100%;
+  height: auto;
+  padding-top: 6rem;
 }
 .nav-menu {
   text-align: left;

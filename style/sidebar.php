@@ -1,7 +1,7 @@
 <section id="site-navigation" class="main-navigation" role="navigation">
 	<nav class="navigation-sidebar">
 		<header id="masthead" role="banner">
-			<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+			<img class="custom-logo" src="<?php header_image(); ?>" alt="" />
 			<div class="site-search"><?php get_search_form(); ?></div>
 		</header><!-- #masthead -->
 	            <?php add_filter( 'wp_nav_menu_objects', 'special_nav_classes' ); ?>
