@@ -428,4 +428,11 @@ function add_new_menu_items($admin_bar){
 // /END of Add Custon New, Documentation and Changelog menus to the Admin bar.
 // *******************************************************
 
+// Allow SVG Upload Support
+function cc_mime_types($mimes) {
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
+
 ?>
