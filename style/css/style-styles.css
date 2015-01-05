@@ -152,7 +152,7 @@ body,
 }
 .page-content {
   display: inline-block;
-  padding-left: 2em;
+  padding: 0 2em;
   float: right;
 }
 section.main-navigation {

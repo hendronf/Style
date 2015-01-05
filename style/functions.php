@@ -76,13 +76,13 @@ add_action( 'after_setup_theme', 'style_setup' );
  */
 
 $args = array(
-	'random-default'         => false,
-	'width'         => 240,
-	'flex-height'    => true,
-	'height'        => 70,
-	'default-image' =>  get_template_directory_uri() . '/src/img/style.png',
-	'uploads'       => true,
-	'header-text'	=> false,
+	'random-default'    => false,
+	'width'         		=> 240,
+	'flex-height'    		=> true,
+	'height'        		=> 70,
+	'default-image' 		=>  get_template_directory_uri() . '/src/img/style.png',
+	'uploads'       		=> true,
+	'header-text'				=> false,
 );
 add_theme_support( 'custom-header', $args );
 
@@ -294,7 +294,7 @@ function style_meta_box( $post ) {
   	wp_nonce_field( plugin_basename( __FILE__ ), 'style_noncename' );
   	$css = get_post_meta($post->ID,'css',true);
 
-	echo '<p>This field is for CSS specific to this page. The post body should contain the markup relating to this page.</p>';
+	echo '<p>This field is for CSS specific to this page. The post body should contain the markup relating to this page only.</p>';
 	echo '<label for="css">CSS</label>	';
   	echo '<p><textarea style="width:100%;" id="css" name="css" rows="20" class=""/>' . $css . '</textarea></p>';
 }
